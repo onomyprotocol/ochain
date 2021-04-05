@@ -10,30 +10,28 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  build:
-    name: Build and upload release assets
+    build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x]
+        arch: [amd64, arm64]
+        targetos: [windows, darwin, linux]
+    name: ochain ${{ matrix.arch }} for ${{ matrix.targetos }}
     steps:
-      - name: Set up Go 1.x
-        uses: actions/setup-go@v2
+      - uses: actions/checkout@v2
+      - name: Setup go
+        uses: actions/setup-go@v1
         with:
-          go-version: ^1.16
-        id: go
+          go-version: 1.15
+        env:
+          GOOS: ${{ matrix.targetos }}
+          GOARCH: ${{ matrix.arch }}
 
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # build the code before creating the release, GO and Solidity first for faster failures
-      - name: Build GO
+      - name: Compile
         run: |
-          make
-
-      - name: Set ENV var for GOPATH
-        run: |
-          echo "GOPATH=$(go env GOPATH)" >> $GITHUB_ENV
+          go mod download
+          cd cmd/ochaind
+          go build .
 
       # now that the code has built create the release and start uploading
       - name: Create Release
@@ -45,7 +43,6 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
           draft: false
-          prerelease: true
       - name: Upload Go Release Asset
         id: upload-go-release-asset
         uses: actions/upload-release-asset@v1
@@ -53,6 +50,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ${{ env.GOPATH }}/bin/gravity
-          asset_name: gravity
+          asset_path: cmd/ochaind/ochaind
+          asset_name: ochaind ${{ matrix.targetos }} ${{ matrix.arch }}
           asset_content_type: application/bin
