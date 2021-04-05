@@ -1,0 +1,15 @@
+syntax = "proto3";
+package onomyprotocol.ochain.ochain;
+
+import "google/api/annotations.proto";
+import "cosmos/base/query/v1beta1/pagination.proto";
+// this line is used by starport scaffolding # 1
+
+option go_package = "github.com/onomyprotocol/ochain/x/ochain/types";
+
+// Query defines the gRPC querier service.
+service Query {
+    // this line is used by starport scaffolding # 2
+}
+
+// this line is used by starport scaffolding # 3
