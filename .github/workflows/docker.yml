@@ -1,0 +1,32 @@
+name: Docker
+on: [push, pull_request]
+
+jobs:
+  amd64:
+    name: ochain Docker
+    environment: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: Set up QEMU
+        run: docker run --rm --privileged multiarch/qemu-user-static --reset -p yes --credential yes
+
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          version: latest
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push blockchain
+        run: docker buildx build --tag onomy/ochain --file Dockerfile --platform linux/amd64 --cache-from onomy/ochain:cache --cache-to onomy/ochain:cache --push --progress tty .
+
+      - name: Build and push UI
+        run: docker buildx build --tag onomy/ochain-ui --file vue/Dockerfile --platform linux/amd64 --cache-from onomy/ochain-ui:cache --cache-to onomy/ochain-ui:cache --push --progress tty ./vue
