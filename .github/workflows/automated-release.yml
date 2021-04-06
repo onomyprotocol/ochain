@@ -2,51 +2,34 @@ name: Automated release build
 
 on:
   push:
-    # Sequence of patterns matched against refs/tags
     tags:
       - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
 
 jobs:
-    build:
-      runs-on: ubuntu-latest
-      strategy:
-        matrix:
-          arch: [amd64, arm64]
-          targetos: [windows, darwin, linux]
-      name: ochain ${{ matrix.arch }} for ${{ matrix.targetos }}
-      steps:
-        - uses: actions/checkout@v2
-        - name: Setup go
-          uses: actions/setup-go@v1
-          with:
-            go-version: 1.15
-          env:
-            GOOS: ${{ matrix.targetos }}
-            GOARCH: ${{ matrix.arch }}
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        go: [ 1.15 ]
+    name: ochain for ${{ matrix.os }}
+    steps:
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
-        - name: Compile
-          run: |
-            go mod download
-            cd cmd/ochaind
-            go build .
+      - name: Setup Go ${{ matrix.go }}
+        uses: actions/setup-go@v2
+        with:
+          go-version: ${{ matrix.go }}
+        id: go
 
-        # now that the code has built create the release and start uploading
-        - name: Create Release
-          id: create_release
-          uses: actions/create-release@v1
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run GoReleaser
+          uses: goreleaser/goreleaser-action@master
           with:
-            tag_name: ${{ github.ref }}
-            release_name: Release ${{ github.ref }}
-            draft: false
-        - name: Upload Go Release Asset
-          id: upload-go-release-asset
-          uses: actions/upload-release-asset@v1
+            version: latest
+            args: release --rm-dist
+            workdir: ./cmd/ochaind
           env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          with:
-            upload_url: ${{ steps.create_release.outputs.upload_url }}
-            asset_path: cmd/ochaind/ochaind
-            asset_name: ochaind ${{ matrix.targetos }} ${{ matrix.arch }}
-            asset_content_type: application/bin
+            GITHUB_TOKEN: ${{ secrets.GO_RELEASER_GITHUB_TOKEN }}
