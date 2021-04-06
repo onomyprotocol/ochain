@@ -14,7 +14,7 @@ jobs:
         go: [ 1.15 ]
     name: ochain for ${{ matrix.os }}
     steps:
-      - name: Check out code into the Go module directory
+      - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
