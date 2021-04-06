@@ -3,7 +3,7 @@ version: "3"
 services:
   ochaindnode0:
     container_name: ochaindnode0
-    image: "onomy/ochaind"
+    image: "onomy/ochain"
     ports:
       - "26656-26657:26656-26657"
       - "1317:1317"
@@ -19,7 +19,7 @@ services:
 
   ochaindnode1:
     container_name: ochaindnode1
-    image: "cosmossdk/ochaind"
+    image: "onomy/ochain"
     ports:
       - "26666-26667:26656-26657"
       - "1318:1317"
@@ -35,7 +35,7 @@ services:
 
   ochaindnode2:
     container_name: ochaindnode2
-    image: "cosmossdk/ochaind"
+    image: "onomy/ochain"
     environment:
       - ID=2
       - LOG=${LOG:-ochaind.log}
@@ -51,7 +51,7 @@ services:
 
   ochaindnode3:
     container_name: ochaindnode3
-    image: "cosmossdk/ochaind"
+    image: "onomy/ochain"
     environment:
       - ID=3
       - LOG=${LOG:-ochaind.log}
