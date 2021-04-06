@@ -2,19 +2,19 @@
 order: 1
 -->
 
-![Welcome to the Cosmos Hub](../images/cosmos-hub-image.jpg)
+![Welcome to the Onomy](../images/cosmos-hub-image.jpg)
 
 # Introduction
 
-The Cosmos Hub is the first of [thousands of interconnected blockchains](https://cosmos.network) that will eventually comprise the **Cosmos Network**. The primary token of the Cosmos Hub is the **ATOM**, but the Hub will support many tokens in the future.
+The Onomy is the first of [thousands of interconnected blockchains](https://cosmos.network) that will eventually comprise the **Cosmos Network**. The primary token of the Onomy is the **ATOM**, but the Hub will support many tokens in the future.
 
 ## The ATOM
 
-Do you have ATOM tokens? With ATOM, you have the superpower to contribute to the security and governance of the Cosmos Hub. Delegate your ATOM to one or more of the 125 validators on the Cosmos Hub blockchain to earn more ATOM through Proof-of-Stake. You can also vote with your ATOM to influence the future of the Cosmos Hub through on-chain governance proposals.
+Do you have ATOM tokens? With ATOM, you have the superpower to contribute to the security and governance of the Onomy. Delegate your ATOM to one or more of the 125 validators on the Onomy blockchain to earn more ATOM through Proof-of-Stake. You can also vote with your ATOM to influence the future of the Onomy through on-chain governance proposals.
 
 Learn more about [being a delegator](../delegators/delegator-faq.md), learn about [the security risks](../delegators/delegator-security.md), and start participating with one of the following wallets.
 
-## Cosmos Hub Wallets
+## Onomy Wallets
 
 ::: warning
 Do your own research and take precautions in regards to wallet security. Neither Tendermint Inc nor the Interchain Foundation is liable if you lose your funds using these third party wallets.
@@ -39,9 +39,9 @@ These community-maintained web and mobile wallets allow you to store & transfer 
 * [Crypto.com](https://crypto.com/) - Android, iOS
 
 
-## Cosmos Hub Explorers
+## Onomy Explorers
 
-These block explorers allow you to search, view and analyze Cosmos Hub data&mdash;like blocks, transactions, validators, etc.
+These block explorers allow you to search, view and analyze Onomy data&mdash;like blocks, transactions, validators, etc.
 
 * [Anthem](https://anthem.chorus.one)
 * [ATOMScan](https://atomscan.com)
@@ -58,13 +58,13 @@ These block explorers allow you to search, view and analyze Cosmos Hub data&mdas
 * [Union Market](https://union.market/token/cosmos)
 
 
-## Cosmos Hub CLI
+## Onomy CLI
 
-`ochaind` is a command-line interface that lets you interact with the Cosmos Hub. `ochaind` is the only tool that supports 100% of the Cosmos Hub features, including accounts, transfers, delegation, and governance. Learn more about `ochaind` with the [delegator's CLI guide](../delegators/delegator-guide-cli.md).
+`ochaind` is a command-line interface that lets you interact with the Onomy. `ochaind` is the only tool that supports 100% of the Onomy features, including accounts, transfers, delegation, and governance. Learn more about `ochaind` with the [delegator's CLI guide](../delegators/delegator-guide-cli.md).
 
-## Running a full-node on the Cosmos Hub Mainnet
+## Running a full-node on the Onomy Mainnet
 
-In order to run a full-node for the Cosmos Hub mainnet, you must first [install `ochaind`](../ochain-tutorials/installation.md). Then, follow [the guide](../ochain-tutorials/join-mainnet.md).
+In order to run a full-node for the Onomy mainnet, you must first [install `ochaind`](../ochain-tutorials/installation.md). Then, follow [the guide](../ochain-tutorials/join-mainnet.md).
 
 If you are looking to run a validator node, follow the [validator setup guide](../validators/validator-setup.md).
 
@@ -74,8 +74,8 @@ Have questions, comments, or new ideas? Participate in the Cosmos community thro
 
 * [Cosmos Community Discord](https://discord.gg/vcExX9T)
 * [Cosmos Community Telegram](https://t.me/cosmosproject)
-* [Cosmos Hub Governance Working Group Telegram](https://t.me/hubgov)
+* [Onomy Governance Working Group Telegram](https://t.me/hubgov)
 * [Cosmos Forum](https://forum.cosmos.network)
 * [Cosmos on Reddit](https://reddit.com/r/cosmosnetwork)
 
-To learn more about the Cosmos Hub and how it fits within the Cosmos Network, visit [cosmos.network](https://cosmos.network).
+To learn more about the Onomy and how it fits within the Cosmos Network, visit [cosmos.network](https://cosmos.network).

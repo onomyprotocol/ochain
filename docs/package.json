@@ -1,7 +1,7 @@
 {
   "name": "ochain-docs",
   "version": "1.0.0",
-  "description": "Gaia Documentation",
+  "description": "Ochain Documentation",
   "main": "index.js",
   "dependencies": {
     "vuepress-theme-cosmos": "^1.0.181"

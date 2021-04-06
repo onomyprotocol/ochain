@@ -2,7 +2,7 @@
 order: 2
 -->
 
-# Run a Validator on the Cosmos Hub Mainnet
+# Run a Validator on the Onomy Mainnet
 
 ::: tip
 Information on how to join the mainnet (`genesis.json` file and seeds) is held [in our `launch` repo](https://github.com/cosmos/launch/). 
@@ -64,7 +64,7 @@ You can confirm that you are in the validator set by using a third party explore
 ## Participate in Genesis as a Validator
 
 ::: warning
-The genesis ceremony for the Cosmos Hub mainnet is closed. Please skip to the next section.
+The genesis ceremony for the Onomy mainnet is closed. Please skip to the next section.
 :::
 
 If you want to participate in genesis as a validator, you need to justify that
@@ -165,7 +165,7 @@ Your validator is active if the following command returns anything:
 ochaind query tendermint-validator-set | grep "$(ochaind tendermint show-address)"
 ```
 
-You should now see your validator in one of the Cosmos Hub explorers. You are looking for the `bech32` encoded `address` in the `~/.ochain/config/priv_validator.json` file.
+You should now see your validator in one of the Onomy explorers. You are looking for the `bech32` encoded `address` in the `~/.ochain/config/priv_validator.json` file.
 
 ::: warning Note
 To be in the validator set, you need to have more total voting power than the 100th validator.
@@ -209,7 +209,7 @@ The default number of files Linux can open (per-process) is `1024`. `ochaind` is
 ```toml
 # /etc/systemd/system/ochaind.service
 [Unit]
-Description=Cosmos Gaia Node
+Description=Cosmos Ochain Node
 After=network.target
 
 [Service]

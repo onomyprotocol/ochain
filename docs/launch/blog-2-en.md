@@ -1,32 +1,32 @@
-# The 3 Phases of the Cosmos Hub Mainnet
+# The 3 Phases of the Onomy Mainnet
 ## Post-Mainnet Development Roadmap & Expectations for Users
 
-The launch of the Cosmos Hub mainnet is expected to happen in phases. Here we outline what to expect in each phase.
+The launch of the Onomy mainnet is expected to happen in phases. Here we outline what to expect in each phase.
 
 # 🚨Phase I: Network Gains Stability 🚨
 
-In the first phase, the network is likely to be unstable; it may experience halts or other forms of failure requiring intervention and coordination among Cosmos Hub validators and full node operators to deploy a fix. This type of failure is not unexpected while the network gains stability. 
+In the first phase, the network is likely to be unstable; it may experience halts or other forms of failure requiring intervention and coordination among Onomy validators and full node operators to deploy a fix. This type of failure is not unexpected while the network gains stability. 
 
 ## State Reversions and Mainnet launch
 
 One of the core ideologies around blockchains is immutability. This is the idea that we don't go 
 back and edit past state transitions. While this notion of immutability is implemented directly via consensus protocols in the software, it is ultimately upheld by social contract among participants.
 
-That said, the technology underlying the Cosmos Hub was intentionally developed to enable low-friction forks and rollbacks. We’ve seen the community practice these techniques numerous times on the test networks. It’s likely they will need to be used on a mainnet as well. Ultimately, they are a countervailing force to the risk of cartel takeover.
+That said, the technology underlying the Onomy was intentionally developed to enable low-friction forks and rollbacks. We’ve seen the community practice these techniques numerous times on the test networks. It’s likely they will need to be used on a mainnet as well. Ultimately, they are a countervailing force to the risk of cartel takeover.
 
-Reverting state is often seen as highly grievous, as it compromises the network’s economic finality. Hence it should only be used in extreme conditions, as witnessed in the case of Ethereum with the DAO Hard Fork. That said, in the early days of the Cosmos Hub network, transfers will not be active, and hence the severity of state reversions will be reduced, as state transitions will be much less “economically final”. If necessary in case of bugs, the state can be exported from a past height and the network restarted, as practiced on the testnets.
+Reverting state is often seen as highly grievous, as it compromises the network’s economic finality. Hence it should only be used in extreme conditions, as witnessed in the case of Ethereum with the DAO Hard Fork. That said, in the early days of the Onomy network, transfers will not be active, and hence the severity of state reversions will be reduced, as state transitions will be much less “economically final”. If necessary in case of bugs, the state can be exported from a past height and the network restarted, as practiced on the testnets.
 
 Once governance chooses to enable transfers, the importance of economic finality must be respected by the network.
 
-To summarize, if there are errors or vulnerabilities in the Cosmos Hub in the days before transfers are enabled, users should expect arbitrary state rollbacks even to genesis.
+To summarize, if there are errors or vulnerabilities in the Onomy in the days before transfers are enabled, users should expect arbitrary state rollbacks even to genesis.
 
 Once transfers are enabled, state rollbacks will be much more difficult to justify. 
 
-**What this means for developers:** The Cosmos mainnet launch is the first phase in which fundraiser participants will be working together to operate the software. As a decentralized application developer, you are likely a user of either the [Cosmos-SDK framework](https://cosmos.network/docs/) or [Tendermint Core](https://tendermint.com/docs/). The progress of your Cosmos-SDK or Tendermint-based application should be independent of the Cosmos Hub roadmap. However, if your project requires the use of [Inter-Blockchain Communication][blog post], you must wait until Phase III, or participate in the IBC testnets that will begin shortly.
+**What this means for developers:** The Cosmos mainnet launch is the first phase in which fundraiser participants will be working together to operate the software. As a decentralized application developer, you are likely a user of either the [Cosmos-SDK framework](https://cosmos.network/docs/) or [Tendermint Core](https://tendermint.com/docs/). The progress of your Cosmos-SDK or Tendermint-based application should be independent of the Onomy roadmap. However, if your project requires the use of [Inter-Blockchain Communication][blog post], you must wait until Phase III, or participate in the IBC testnets that will begin shortly.
 
 **What this means for users:** In this phase, we strongly recommend that you do not arrange to trade Atoms (eg. by legal contract as they will not be transferable yet) as there is the risk of state being reverted.
 
-You can, however, safely delegate Atoms to validators in this phase by following the CLI guideline and video tutorial linked below. Of course, in the event of a state reversion, any earned fees and inflation may be lost. Note that only `ochaind` should be used for making transactions. Voyager, the GUI for interacting with the Cosmos Hub, is currently in alpha and undergoing development. A separate announcement will be made once Voyager is safer for use.
+You can, however, safely delegate Atoms to validators in this phase by following the CLI guideline and video tutorial linked below. Of course, in the event of a state reversion, any earned fees and inflation may be lost. Note that only `ochaind` should be used for making transactions. Voyager, the GUI for interacting with the Onomy, is currently in alpha and undergoing development. A separate announcement will be made once Voyager is safer for use.
 
 CLI Guide 🔗:  [github.com/cosmos/cosmos-sdk/…/delegator-guide-cli.md](https://github.com/cosmos/cosmos-sdk/blob/develop/docs/ochain/delegator-guide-cli.md) 
 

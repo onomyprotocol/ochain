@@ -3,7 +3,7 @@
 이 문서는 풀노드 운영자가 `cosmoshub-3`에서 `cosmoshub-4` 업그레이드를 진행하기 위한 과정을 설명합니다.
 텐더민트 팀이 공식적인 업데이트된 제네시스 파일을 업로드할 예정이나, 각 검증인이 해당 제네시스 파일을 각자 검증할 것을 권장합니다.
 
-현재 `cosmoshub-3`에서는 `Cosmos Hub 4 Upgrade Proposal`에 대한 사회적 합의가 도달된 것으로 판단됩니다.
+현재 `cosmoshub-3`에서는 `Onomy 4 Upgrade Proposal`에 대한 사회적 합의가 도달된 것으로 판단됩니다.
 프로포절 #[27](https://www.mintscan.io/cosmos/proposals/27), #[35](https://www.mintscan.io/cosmos/proposals/35) and #[36](https://www.mintscan.io/cosmos/proposals/36)의 내용에 따라 업그레이드 과정은 `2021년 2월 18일, 06:00 UTC`에 진행될 예정입니다.
 
   - [마이그레이션](#마이그레이션)
@@ -34,12 +34,12 @@
 
 ## 사전 정보
 
-지난 코스모스 허브 업그레이드(`cosmoshub-3`) 이후 코스모스 SDK와 Gaia 애플리케이션에 상당한 양의 변경사항이 적용되었습니다.
+지난 코스모스 허브 업그레이드(`cosmoshub-3`) 이후 코스모스 SDK와 Ochain 애플리케이션에 상당한 양의 변경사항이 적용되었습니다.
 변경사항에는 신규 기능, 프로토콜 변경사항, 애플리케이션 구조 변경 등이 포함되었으며, 애플리케이션 개발 과정의 개선이 기대됩니다.
 
 우선, [인터체인 표준](https://github.com/cosmos/ics#ibc-quick-references)를 따른 [IBC](https://docs.cosmos.network/master/ibc/overview.html)이 활성화될 예정입니다. 또한 효율성, 노드 동기화, 추후 블록체인 업데이트 과정이 개선됩니다. 자세한 내용은 [스타게이트 웹사이트](https://stargate.cosmos.network/)를 참고하세요.
 
-__이번 업그레이드에서 풀 노드 운영자 업그레이드를 진행하는 것은 [Gaia](https://github.com/cosmos/ochain) 애플리케이션 v4.0.0입니다. 이번 버전의 Gaia 애플리케이션은 코스모스 SDK v0.41.0 그리고 텐더민트 v0.34.3 기반으로 빌드되었습니다.
+__이번 업그레이드에서 풀 노드 운영자 업그레이드를 진행하는 것은 [Ochain](https://github.com/cosmos/ochain) 애플리케이션 v4.0.0입니다. 이번 버전의 Ochain 애플리케이션은 코스모스 SDK v0.41.0 그리고 텐더민트 v0.34.3 기반으로 빌드되었습니다.
 
 ## 주요 업데이트
 
@@ -74,7 +74,7 @@ __이번 업그레이드에서 풀 노드 운영자 업그레이드를 진행하
 
 __참고__: 이 가이드는 코스모스 SDK의 v0.37.15 기반의 ochain v2.0.15를 운영한다는 가정에 작성된 가이드입니다.
 
-Gaia v2.0.15의 버전/커밋 해시값: `89cf7e6fc166eaabf47ad2755c443d455feda02e`
+Ochain v2.0.15의 버전/커밋 해시값: `89cf7e6fc166eaabf47ad2755c443d455feda02e`
 
 1. 올바른 _gaiad_ 버전 (v2.0.15)를 운영하고 있는 것을 확인하세요:
 
@@ -130,7 +130,7 @@ Gaia v2.0.15의 버전/커밋 해시값: `89cf7e6fc166eaabf47ad2755c443d455feda0
    [SHA256_VALUE]  cosmoshub_3_genesis_export.json
    ```
 
-1. 이 단계 까지 오셨다면 올바른 제네시스 상태를 내보내셨습니다! 이후 과정부터는 [Gaia](https://github.com/cosmos/ochain) v4.0.0을 필요로 합니다. 그룹 채팅 방의 다른 검증인들/피어와 새로운 제네시스 파일의 해시를 비교/검증하세요.
+1. 이 단계 까지 오셨다면 올바른 제네시스 상태를 내보내셨습니다! 이후 과정부터는 [Ochain](https://github.com/cosmos/ochain) v4.0.0을 필요로 합니다. 그룹 채팅 방의 다른 검증인들/피어와 새로운 제네시스 파일의 해시를 비교/검증하세요.
 
    **참고**: Go [1.15+](https://golang.org/dl/) 버전이 설치되어야 합니다!
 
@@ -151,7 +151,7 @@ Gaia v2.0.15의 버전/커밋 해시값: `89cf7e6fc166eaabf47ad2755c443d455feda0
     build_deps:
     ...
    ```
-    Gaia v4.0.0 버전/커밋 해시 : `2bb04266266586468271c4ab322367acbf41188f`
+    Ochain v4.0.0 버전/커밋 해시 : `2bb04266266586468271c4ab322367acbf41188f`
 
 1. 내보낸 상태를 기존 v2.0.15 버전에서 v4.0.0 버전으로 마이그레이션 하세요:
 

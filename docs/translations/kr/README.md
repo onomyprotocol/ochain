@@ -1,6 +1,6 @@
-# Gaia Documentation
+# Ochain Documentation
 
-`Gaia` docs에 오신 것을 환영합니다. `Gaia` 는 코스모스 허브를 위한 코스모스 애플리케이션의 현재 명칭입니다.
+`Ochain` docs에 오신 것을 환영합니다. `Ochain` 는 코스모스 허브를 위한 코스모스 애플리케이션의 현재 명칭입니다.
 
 ## 코스모스 퍼블릭 테스트넷에 참가하세요
 

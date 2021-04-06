@@ -4,7 +4,7 @@ order: 2
 
 # Genesis File
 
-This document explains how the genesis file of the Cosmos Hub mainnet is structured. It also explains how you can build a genesis file for your own `ochain` testnet.
+This document explains how the genesis file of the Onomy mainnet is structured. It also explains how you can build a genesis file for your own `ochain` testnet.
 
 Note that you can generate a default genesis file for your own testnet by running the following command:
 

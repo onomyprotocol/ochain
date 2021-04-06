@@ -1,11 +1,11 @@
-# Cosmos Hub 3 Upgrade Instructions
+# Onomy 3 Upgrade Instructions
 
 The following document describes the necessary steps involved that validators and full node operators
 must take in order to upgrade from `cosmoshub-3` to `cosmoshub-4`. The Cosmos teams
 will post an official `cosmoshub-4` genesis file, but it is recommended that validators
 execute the following instructions in order to verify the resulting genesis file.
 
-There is a strong social consensus around proposal `Cosmos Hub 4 Upgrade Proposal`
+There is a strong social consensus around proposal `Onomy 4 Upgrade Proposal`
 on `cosmoshub-3`. Following proposals #[27](https://www.mintscan.io/cosmos/proposals/27), #[35](https://www.mintscan.io/cosmos/proposals/35) and #[36](https://www.mintscan.io/cosmos/proposals/36).
 This indicates that the upgrade procedure should be performed on `February 18, 2021 at 06:00 UTC`.
 
@@ -24,12 +24,12 @@ This indicates that the upgrade procedure should be performed on `February 18, 2
 The Cosmoshub-3 will undergo a scheduled upgrade to Cosmoshub-4 on Feb 18, 2021 at 6 UTC.
 
 The following is a short summary of the upgrade steps:
-    1. Stopping the running Gaia v2.0.x instance 
+    1. Stopping the running Ochain v2.0.x instance 
     1. Backing up configs, data, and keys used for running Cosmoshub-3
     1. Resetting state to clear the local Cosmoshub-3 state
-    1. Copying the cosmoshub-4 genesis file to the Gaia config folder (either after migrating an existing cosmoshub-3 genesis export, or downloading the cosmoshub-4 genesis from the mainnet github)
-    1. Installing the Gaia v4.0.x release
-    1. Starting the Gaia v4.0.x instance to resume the Cosmos hub chain at a height of <cosmoshub3 height> + 1.
+    1. Copying the cosmoshub-4 genesis file to the Ochain config folder (either after migrating an existing cosmoshub-3 genesis export, or downloading the cosmoshub-4 genesis from the mainnet github)
+    1. Installing the Ochain v4.0.x release
+    1. Starting the Ochain v4.0.x instance to resume the Cosmos hub chain at a height of <cosmoshub3 height> + 1.
 
 Specific instructions for validators are available in [Upgrade Procedure](#upgrade-procedure), 
 and specific instructions for full node operators are available in [Guidance for Full Node Operators](#guidance-for-full-node-operators).
@@ -37,8 +37,8 @@ and specific instructions for full node operators are available in [Guidance for
 Upgrade coordination and support for validators will be available on the #validators-verified channel of the [Cosmos Discord](https://discord.gg/vcExX9T).
 
 The network upgrade can take the following potential pathways:
-1. Happy path: Validator successfully migrates the cosmoshub-3 genesis file to a cosmoshub-4 genesis file, and the validator can successfully start Gaia v4 with the cosmoshub-4 genesis within 1-2 hours of the scheduled upgrade.
-1. Not-so-happy path: Validators have trouble migrating the cosmoshub-3 genesis to a cosmoshub-4 genesis, but can obtain the genesis file from the Cosmos mainnet github repo and can successfully start Gaia v4 within 1-2 hours of the scheduled upgrade.  
+1. Happy path: Validator successfully migrates the cosmoshub-3 genesis file to a cosmoshub-4 genesis file, and the validator can successfully start Ochain v4 with the cosmoshub-4 genesis within 1-2 hours of the scheduled upgrade.
+1. Not-so-happy path: Validators have trouble migrating the cosmoshub-3 genesis to a cosmoshub-4 genesis, but can obtain the genesis file from the Cosmos mainnet github repo and can successfully start Ochain v4 within 1-2 hours of the scheduled upgrade.  
 1. Abort path: In the rare event that the team becomes aware of critical issues, which result in an unsuccessful migration within a few hours, the upgrade will be announced as aborted 
    on the #validators-verified channel of [Discord](https://discord.gg/vcExX9T), and validators will need to resume running cosmoshub-3 network without any updates or changes. 
    A new governance proposal for the upgrade will need to be issued and voted on by the community.
@@ -47,7 +47,7 @@ The network upgrade can take the following potential pathways:
 
 These chapters contains all the migration guides to update your app and modules to Cosmos v0.40 Stargate.
 
-If you’re running a block explorer, wallet, exchange, validator, or any other service (eg. custody provider) that depends upon the Cosmos Hub or Cosmos ecosystem, you’ll want to pay attention, because this upgrade will involve substantial changes.
+If you’re running a block explorer, wallet, exchange, validator, or any other service (eg. custody provider) that depends upon the Onomy or Cosmos ecosystem, you’ll want to pay attention, because this upgrade will involve substantial changes.
 
 1. [App and Modules Migration](https://github.com/cosmos/cosmos-sdk/blob/master/docs/migrations/app_and_modules.md)
 1. [Chain Upgrade Guide to v0.40](https://github.com/cosmos/cosmos-sdk/blob/master/docs/migrations/chain-upgrade-guide-040.md)
@@ -65,7 +65,7 @@ https://github.com/cosmos/ochain/issues/569#issuecomment-767910963
 
 ## Preliminary
 
-Many changes have occurred to the Cosmos SDK and the Gaia application since the latest
+Many changes have occurred to the Cosmos SDK and the Ochain application since the latest
 major upgrade (`cosmoshub-3`). These changes notably consist of many new features,
 protocol changes, and application structural changes that favor developer ergonomics
 and application development.
@@ -75,7 +75,7 @@ the [Interchain Standads](https://github.com/cosmos/ics#ibc-quick-references) wi
 This upgrade comes with several improvements in efficiency, node synchronization and following blockchain upgrades.
 More details on the [Stargate Website](https://stargate.cosmos.network/).
 
-__[Gaia](https://github.com/cosmos/ochain) application v4.0.2 is
+__[Ochain](https://github.com/cosmos/ochain) application v4.0.2 is
 what full node operators will upgrade to and run in this next major upgrade__.
 Following Cosmos SDK version v0.41.2 and Tendermint v0.34.7.
 
@@ -127,7 +127,7 @@ ochain v2.0.15 with v0.37.15 of the _Cosmos SDK_ and restore to their latest sna
 
 __Note__: It is assumed you are currently operating a full-node running ochain v2.0.15 with v0.37.15 of the _Cosmos SDK_.
 
-The version/commit hash of Gaia v2.0.15: `89cf7e6fc166eaabf47ad2755c443d455feda02e`
+The version/commit hash of Ochain v2.0.15: `89cf7e6fc166eaabf47ad2755c443d455feda02e`
 
 1. Verify you are currently running the correct version (v2.0.15) of _gaiad_:
 
@@ -187,7 +187,7 @@ The version/commit hash of Gaia v2.0.15: `89cf7e6fc166eaabf47ad2755c443d455feda0
    ```
 
 1. At this point you now have a valid exported genesis state! All further steps now require
-v4.0.2 of [Gaia](https://github.com/cosmos/ochain). 
+v4.0.2 of [Ochain](https://github.com/cosmos/ochain). 
 Cross check your genesis hash with other peers (other validators) in the chat rooms.
 
    **NOTE**: Go [1.15+](https://golang.org/dl/) is required!
@@ -206,7 +206,7 @@ Cross check your genesis hash with other peers (other validators) in the chat ro
     build_tags: netgo,ledger
     ...
    ```
-    The version/commit hash of Gaia v4.0.2: `6d46572f3273423ad9562cf249a86ecc8206e207`
+    The version/commit hash of Ochain v4.0.2: `6d46572f3273423ad9562cf249a86ecc8206e207`
 
 1. Migrate exported state from the current v2.0.15 version to the new v4.0.2 version:
 
@@ -265,7 +265,7 @@ Cross check your genesis hash with other peers (other validators) in the chat ro
     go: go version go1.15 darwin/amd64
    ```
 
-1. Stop your Gaia v2.0.15 instance.
+1. Stop your Ochain v2.0.15 instance.
 
 1. After the chain has halted, make a backup of your `.ochain` directory
 
@@ -285,7 +285,7 @@ Cross check your genesis hash with other peers (other validators) in the chat ro
    The cosmoshub-4 genesis file will be validated by community participants, and
    the hash of the file will be shared on the #validators-verified channel of the [Cosmos Discord](https://discord.gg/vcExX9T).
 
-1. Install v4.0.2 of [Gaia](https://github.com/cosmos/ochain).
+1. Install v4.0.2 of [Ochain](https://github.com/cosmos/ochain).
 
    **NOTE**: Go [1.15+](https://golang.org/dl/) is required!
 
@@ -304,7 +304,7 @@ Cross check your genesis hash with other peers (other validators) in the chat ro
     ...
    ```
    
-   The version/commit hash of Gaia v4.0.2: `6d46572f3273423ad9562cf249a86ecc8206e207`
+   The version/commit hash of Ochain v4.0.2: `6d46572f3273423ad9562cf249a86ecc8206e207`
 
 1. Reset state:
 

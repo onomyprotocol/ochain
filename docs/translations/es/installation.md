@@ -2,7 +2,7 @@
 order: 2
 -->
 
-# Instalación de Gaia
+# Instalación de Ochain
 
 Esta guía le explicará como instalar los puntos de entrada `ochaind` y `ochaind` en su sistema. Con esto instalado en su servidor, puede participar en la red principal como un [Full Node](./join-mainnet.md) o como un [Validador](../validators/validator-setup.md).
 
@@ -23,7 +23,7 @@ source ~/.bash_profile
 
 ## Instalación de los binarios
 
-Siguiente, instalemos la última versión de Gaia. Asegúrese de hacer `git checkout` a la [versión publicada](https://github.com/cosmos/ochain/releases) correcta.
+Siguiente, instalemos la última versión de Ochain. Asegúrese de hacer `git checkout` a la [versión publicada](https://github.com/cosmos/ochain/releases) correcta.
 
 ```bash
 git clone -b <latest-release-tag> https://github.com/cosmos/ochain

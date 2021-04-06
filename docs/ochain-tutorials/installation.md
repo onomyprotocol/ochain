@@ -2,7 +2,7 @@
 order: 2
 -->
 
-# Install Gaia
+# Install Ochain
 
 This guide will explain how to install the `ochaind` entrypoint
 onto your system. With these installed on a server, you can participate in the
@@ -26,7 +26,7 @@ source ~/.bash_profile
 
 ## Install the binaries
 
-Next, let's install the latest version of Gaia. Make sure you `git checkout` the
+Next, let's install the latest version of Ochain. Make sure you `git checkout` the
 correct [released version](https://github.com/cosmos/ochain/releases).
 
 ```bash

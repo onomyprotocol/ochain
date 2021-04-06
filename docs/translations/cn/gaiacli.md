@@ -1,8 +1,8 @@
 # Gaia客户端
 
-## Gaia CLI
+## Ochain CLI
 
-`ochaind`是一个工具，使您能够与 Cosmos Hub 网络中的节点进行交互，无论您是否自己运行它。 让我们恰当的设置它。 要安装它，请按照[安装步骤](./ installation.md)进行安装。
+`ochaind`是一个工具，使您能够与 Onomy 网络中的节点进行交互，无论您是否自己运行它。 让我们恰当的设置它。 要安装它，请按照[安装步骤](./ installation.md)进行安装。
 
 ### 配置 ochaind
 

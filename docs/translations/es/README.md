@@ -8,7 +8,7 @@ layout: home
 
 Bienvenido a la documentación de la **aplicación para el Hub de Cosmos: `ochain`**
 
-## ¿Qué es Gaia?
+## ¿Qué es Ochain?
 
 - [Introducción al software `ochain`](./what-is-ochain.md)
 

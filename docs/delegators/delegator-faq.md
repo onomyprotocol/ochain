@@ -10,7 +10,7 @@ People that cannot or do not want to operate [validator nodes](..//validators/ov
 
 **Delegators share the revenue of their validators, but they also share the risks.** In terms of revenue, validators and delegators differ in that validators can apply a commission on the revenue that goes to their delegator before it is distributed. This commission is known to delegators beforehand and can only change according to predefined constraints (see [section](#choosing-a-validator) below). In terms of risk, delegators' Atoms can be slashed if their validator misbehaves. For more, see [Risks](#risks) section.
 
-To become delegators, Atom holders need to send a ["Delegate transaction"](./delegator-guide-cli.md#sending-transactions) where they specify how many Atoms they want to bond and to which validator. A list of validator candidates will be displayed in Cosmos Hub explorers. Later, if a delegator wants to unbond part or all of their stake, they needs to send an "Unbond transaction". From there, the delegator will have to wait 3 weeks to retrieve their Atoms. Delegators can also send a "Rebond Transaction" to switch from one validator to another, without having to go through the 3 weeks waiting period. 
+To become delegators, Atom holders need to send a ["Delegate transaction"](./delegator-guide-cli.md#sending-transactions) where they specify how many Atoms they want to bond and to which validator. A list of validator candidates will be displayed in Onomy explorers. Later, if a delegator wants to unbond part or all of their stake, they needs to send an "Unbond transaction". From there, the delegator will have to wait 3 weeks to retrieve their Atoms. Delegators can also send a "Rebond Transaction" to switch from one validator to another, without having to go through the 3 weeks waiting period. 
 
 For a practical guide on how to become a delegator, click [here](./delegator-guide-cli.md).
 
@@ -39,7 +39,7 @@ Being a delegator is not a passive task. Here are the main directives of a deleg
 Validators and delegators earn revenue in exchange for their services. This revenue is given in three forms:
 
 - **Block provisions (Atoms):** They are paid in newly created Atoms. Block provisions exist to incentivize Atom holders to stake. The yearly inflation rate is calculated to target 2/3 bonded stake. If the total bonded stake in the network is less than 2/3 of the total Atom supply, inflation increases until it reaches 20%. If the total bonded stake is more than 2/3 of the Atom supply, inflation decreases until it reaches 7%. This means that if total bonded stake stays less than 2/3 of the total Atom supply for a prolonged period of time, unbonded Atom holders can expect their Atom value to deflate by 20% (compounded) per year.
-- **Transaction fees (various tokens):** Each transfer on the Cosmos Hub comes with transactions fees. These fees can be paid in any currency that is whitelisted by the Hub's governance. Fees are distributed to bonded Atom holders in proportion to their stake. The first whitelisted token at launch is the ATOM.
+- **Transaction fees (various tokens):** Each transfer on the Onomy comes with transactions fees. These fees can be paid in any currency that is whitelisted by the Hub's governance. Fees are distributed to bonded Atom holders in proportion to their stake. The first whitelisted token at launch is the ATOM.
 
 ## Validator Commission
 

@@ -1,4 +1,4 @@
-## 安装 Gaia
+## 安装 Ochain
 
 本教程将详细说明如何在你的系统上安装`ochaind`和`ochaind`。安装后，你可以作为[全节点](./join-mainnet.md)或是[验证人节点](./validators/validator-setup.md)加入到主网。
 
@@ -18,7 +18,7 @@ Cosmos SDK 需要安装**Go 1.12+**
 
 ### 安装二进制执行程序
 
-接下来，安装最新版本的 Gaia。需要确认您 `git checkout 了正确的[发布版本](https://github.com/cosmos/cosmos-sdk/releases)。
+接下来，安装最新版本的 Ochain。需要确认您 `git checkout 了正确的[发布版本](https://github.com/cosmos/cosmos-sdk/releases)。
 
 ::: warning
 对于主网，请确保你的版本大于或等于`v0.33.0`

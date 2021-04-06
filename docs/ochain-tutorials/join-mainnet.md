@@ -2,7 +2,7 @@
 order: 3
 -->
 
-# Join the Cosmos Hub Mainnet
+# Join the Onomy Mainnet
 
 
 ## Quickstart
@@ -26,7 +26,7 @@ If you'd like to save those seeds to your settings put them in ~/.ochain/config/
 
 **You need to [install ochain](./installation.md) before you go further**
 
-**Gaia nodes on cosmoshub-4 take about 45 min to startup. The development team are evaluating [solutions](https://github.com/cosmos/cosmos-sdk/issues/7766).**
+**Ochain nodes on cosmoshub-4 take about 45 min to startup. The development team are evaluating [solutions](https://github.com/cosmos/cosmos-sdk/issues/7766).**
 
 ## Setting Up a New Node
 
@@ -90,15 +90,15 @@ ochaind start
 
 Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.ochain/config/config.toml`. The [`launch`](https://github.com/cosmos/launch) repo contains links to some seed nodes.
 
-If those seeds aren't working, you can find more seeds and persistent peers on a Cosmos Hub explorer (a list can be found on the [launch page](https://cosmos.network/launch)). 
+If those seeds aren't working, you can find more seeds and persistent peers on a Onomy explorer (a list can be found on the [launch page](https://cosmos.network/launch)). 
 
 
 
 ## A Note on Gas and Fees
 
-On Cosmos Hub mainnet, the accepted denom is `uatom`, where `1atom = 1.000.000uatom`
+On Onomy mainnet, the accepted denom is `uatom`, where `1atom = 1.000.000uatom`
 
-Transactions on the Cosmos Hub network need to include a transaction fee in order to be processed. This fee pays for the gas required to run the transaction. The formula is the following:
+Transactions on the Onomy network need to include a transaction fee in order to be processed. This fee pays for the gas required to run the transaction. The formula is the following:
 
 ```
 fees = ceil(gas * gasPrices)
@@ -148,7 +148,7 @@ View the status of the network with the [Cosmos Explorer](https://cosmos.network
 
 ## Export State
 
-Gaia can dump the entire application state to a JSON file, which could be useful for manual analysis and can also be used as the genesis file of a new network.
+Ochain can dump the entire application state to a JSON file, which could be useful for manual analysis and can also be used as the genesis file of a new network.
 
 Export state with:
 
@@ -200,4 +200,4 @@ deducted as the blockchain will halt (aka. this is a free transaction).
 
 ## Upgrade to Validator Node
 
-You now have an active full node. What's the next step? You can upgrade your full node to become a Cosmos Validator. The top 125 validators have the ability to propose new blocks to the Cosmos Hub. Continue onto [the Validator Setup](../validators/validator-setup.md).
+You now have an active full node. What's the next step? You can upgrade your full node to become a Cosmos Validator. The top 125 validators have the ability to propose new blocks to the Onomy. Continue onto [the Validator Setup](../validators/validator-setup.md).

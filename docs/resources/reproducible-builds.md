@@ -2,7 +2,7 @@
 order: 6
 -->
 
-# Build Gaia Deterministically
+# Build Ochain Deterministically
 
 The [Tendermint rbuilder Docker image](https://github.com/tendermint/images/tree/master/rbuilder) provides a deterministic build environment that is used to build Cosmos SDK applications. It provides a way to be reasonably sure that the executables are really built from the git source. It also makes sure that the same, tested dependencies are used and statically built into the executable.
 

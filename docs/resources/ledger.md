@@ -4,7 +4,7 @@ order: 4
 
 # Ledger Nano Support
 
-Using a hardware wallet to store your keys greatly improves the security of your crypto assets. The Ledger device acts as an enclave of the seed and private keys, and the process of signing transaction takes place within it. No private information ever leaves the Ledger device. The following is a short tutorial on using the Cosmos Ledger app with the Gaia CLI or the [Lunie.io](https://lunie.io/#/) web wallet.
+Using a hardware wallet to store your keys greatly improves the security of your crypto assets. The Ledger device acts as an enclave of the seed and private keys, and the process of signing transaction takes place within it. No private information ever leaves the Ledger device. The following is a short tutorial on using the Cosmos Ledger app with the Ochain CLI or the [Lunie.io](https://lunie.io/#/) web wallet.
 
 At the core of a Ledger device there is a mnemonic seed phrase that is used to generate private keys. This phrase is generated when you initialize you Ledger. The mnemonic is compatible with Cosmos and can be used to seed new accounts.
 
@@ -59,16 +59,16 @@ You should now see the same address that is displayed on the Lunie application.
 
 To learn more about using Lunie, [here is a tutorial](https://medium.com/easy2stake/how-to-delegate-re-delegate-un-delegate-cosmos-atoms-with-the-lunie-web-wallet-eb72369e52db) on staking and delegating ATOMs using the Lunie web wallet.
 
-## Gaia CLI + Ledger Nano
+## Ochain CLI + Ledger Nano
 
 **Note: You need to [install the Cosmos app](#install-the-cosmos-ledger-application) on your Ledger Nano before using following this section**
 
-The tool used to generate addresses and transactions on the Cosmos Hub network is `ochaind`. Here is how to get started. If using a CLI tool is unfamiliar to you, scroll down and follow instructions for using the Lunie.io web wallet instead.
+The tool used to generate addresses and transactions on the Onomy network is `ochaind`. Here is how to get started. If using a CLI tool is unfamiliar to you, scroll down and follow instructions for using the Lunie.io web wallet instead.
 
 ### Before you Begin
 
 - [Install Golang](https://golang.org/doc/install)
-- [Install Gaia](https://cosmos.network/docs/cosmos-hub/installation.html)
+- [Install Ochain](https://cosmos.network/docs/cosmos-hub/installation.html)
 
 Verify that ochaind is installed correctly with the following command
 

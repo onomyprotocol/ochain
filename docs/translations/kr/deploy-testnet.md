@@ -12,7 +12,7 @@
 
 ## Docker 이미지
 
-컨테이너 형태로 Gaia 디플로이를 원하시는 경우, `build` 단계를 건너뛰시고 공식 이미지 파일을 설치하실 수 있습니다. \$TAG은 설치하시려는 버전을 의미합니다.
+컨테이너 형태로 Ochain 디플로이를 원하시는 경우, `build` 단계를 건너뛰시고 공식 이미지 파일을 설치하실 수 있습니다. \$TAG은 설치하시려는 버전을 의미합니다.
 
 - `docker run -it -v ~/.ochain:/root/.ochain -v ~/.ochain:/root/.ochain tendermint:$TAG ochaind init`
 - `docker run -it -p 26657:26657 -p 26656:26656 -v ~/.ochain:/root/.ochain -v ~/.ochain:/root/.ochain tendermint:$TAG ochaind start`

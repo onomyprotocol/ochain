@@ -6,10 +6,10 @@ parent:
 
 # Validators 
 
-This folder contains documentation relevant to validators of the Cosmos Hub and other `ochain` blockchains. 
+This folder contains documentation relevant to validators of the Onomy and other `ochain` blockchains. 
 
 - [Validator Overview](./overview.md)
-- [Setting Up a Validator for Cosmos Hub Mainnet](./validator-setup.md)
+- [Setting Up a Validator for Onomy Mainnet](./validator-setup.md)
 - [Validator FAQ](./validator-faq.md)
 - [Validator Security Notice](./security.md)
 - Key Management System

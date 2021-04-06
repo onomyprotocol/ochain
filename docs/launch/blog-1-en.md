@@ -1,11 +1,11 @@
-# Cosmos Hub to Launch Mainnet
+# Onomy to Launch Mainnet
 
 ## Pre-launch Dependencies & How to Safely Claim Your Atoms
 
 In the summer of 2016, the [Cosmos whitepaper][whitepaper] was released. In the
 spring of 2017, the [Cosmos fundraiser][fundraiser] was completed. In the first
 months of 2019, the software is [feature complete][releases]. The launch of the
-Cosmos Hub draws near. What does this mean for Atom holders?
+Onomy draws near. What does this mean for Atom holders?
 
 If you are an Atom holder, you will be able to delegate Atoms to validators on
 the main network and vote on governance proposals. In fact, the future success
@@ -28,7 +28,7 @@ recovered. If the validator misbehaves during this time, some or all of the
 delegated Atoms may be burned. It is your responsibility to perform due
 diligence on validators before delegating!
 
-The Cosmos Hub is highly experimental software. In these early days, we can
+The Onomy is highly experimental software. In these early days, we can
 expect to have issues, updates, and bugs. The existing tools require advanced
 technical skills and involve risks which are outside of the control of the
 Interchain Foundation and/or the Tendermint team (see also the risk section in
@@ -65,7 +65,7 @@ launch RC][rc]. Once this RC is completed, the Cosmos-SDK team will engage in a
 round of internal bug hunting to further ensure sufficient pre-launch security
 due diligence.
 
-Right after Cosmos-SDK v0.31.0 is released, a Gaia testnet will be released in
+Right after Cosmos-SDK v0.31.0 is released, a Ochain testnet will be released in
 an effort to flush out any hard to find bugs.
 
 ### 3 Game of Stakes Completed
@@ -87,7 +87,7 @@ required to become a validator at genesis. The ultimate result of the
 recommended allocation and the collection of gentxs is a final [genesis
 file][file].
 
-### 1 Cosmos Hub Mainnet Launch
+### 1 Onomy Mainnet Launch
 
 Once a genesis file is adopted by the community, and +⅔ of the voting power
 comes online, the Cosmos mainnet will be live.

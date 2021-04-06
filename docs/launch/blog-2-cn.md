@@ -84,7 +84,7 @@ Cosmos浏览器是查看治理提案状态的最佳途径，可以在我们的�
 
 
 
-**对开发人员的建议**：使用Cosmos-SDK或Tendermint BFT构建的应用专有链将能够连接到 Cosmos Hub，并与连接到Hubs上的其他任意区块链进行跨链交互。
+**对开发人员的建议**：使用Cosmos-SDK或Tendermint BFT构建的应用专有链将能够连接到 Onomy，并与连接到Hubs上的其他任意区块链进行跨链交互。
 
 
 

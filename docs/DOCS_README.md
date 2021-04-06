@@ -5,11 +5,11 @@ parent:
 
 # Updating the docs
 
-If you want to open a PR on Gaia to update the documentation, please follow the guidelines in the [`CONTRIBUTING.md`](https://github.com/cosmos/ochain/tree/main/CONTRIBUTING.md)
+If you want to open a PR on Ochain to update the documentation, please follow the guidelines in the [`CONTRIBUTING.md`](https://github.com/cosmos/ochain/tree/main/CONTRIBUTING.md)
 
 ## Docs Build Workflow
 
-The documentation for Gaia is hosted at:
+The documentation for Ochain is hosted at:
 
 - https://hub.cosmos.network/
 

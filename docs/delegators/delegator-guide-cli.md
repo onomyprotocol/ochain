@@ -4,7 +4,7 @@ order: 1
 
 # Delegator Guide (CLI)
 
-This document contains all the necessary information for delegators to interact with the Cosmos Hub through the Command-Line Interface (CLI).
+This document contains all the necessary information for delegators to interact with the Onomy through the Command-Line Interface (CLI).
 
 It also contains instructions on how to manage accounts, restore accounts from the fundraiser and use a ledger nano device.
 
@@ -14,7 +14,7 @@ carefully, as negligence in this significant process could lead to an indefinite
 loss of your Atoms. Therefore, read through the following instructions in their 
 entirety prior to proceeding and reach out to us in case you need support.
 
-Please also note that you are about to interact with the Cosmos Hub, a
+Please also note that you are about to interact with the Onomy, a
 blockchain technology containing highly experimental software. While the
 blockchain has been developed in accordance to the state of the art and audited
 with utmost care, we can nevertheless expect to have issues, updates and bugs.
@@ -37,7 +37,7 @@ Please exercise extreme caution!
 - [Cosmos Accounts](#cosmos-accounts)
     + [Restoring an Account from the Fundraiser](#restoring-an-account-from-the-fundraiser)
     + [Creating an Account](#creating-an-account)
-- [Accessing the Cosmos Hub Network](#accessing-the-cosmos-hub-network)
+- [Accessing the Onomy Network](#accessing-the-cosmos-hub-network)
     + [Running Your Own Full-Node](#running-your-own-full-node)
     + [Connecting to a Remote Full-Node](#connecting-to-a-remote-full-node)
 - [Setting Up `ochaind`](#setting-up-ochaind)
@@ -123,7 +123,7 @@ If you participated in the fundraiser, you should be in possession of a 12-words
 
 #### On a Ledger Device
 
-At the core of a ledger device, there is a mnemonic used to generate accounts on multiple blockchains (including the Cosmos Hub). Usually, you will create a new mnemonic when you initialize your ledger device. However, it is possible to tell the ledger device to use a mnemonic provided by the user instead. Let us go ahead and see how you can input the mnemonic you obtained during the fundraiser as the seed of your ledger device. 
+At the core of a ledger device, there is a mnemonic used to generate accounts on multiple blockchains (including the Onomy). Usually, you will create a new mnemonic when you initialize your ledger device. However, it is possible to tell the ledger device to use a mnemonic provided by the user instead. Let us go ahead and see how you can input the mnemonic you obtained during the fundraiser as the seed of your ledger device. 
 
 ::: warning
 *NOTE: To do this, **it is preferable to use a brand new ledger device.**. Indeed, there can be only one mnemonic per ledger device. If, however, you want to use a ledger that is already initialized with a seed, you can reset it by going in `Settings`>`Device`>`Reset All`. **Please note that this will wipe out the seed currently stored on the device. If you have not properly secured the associated mnemonic, you could lose your funds!!!***
@@ -248,7 +248,7 @@ ochaind keys add <yourKeyName> --recover --account 1
 This command will prompt you to input a passphrase as well as your mnemonic. Change the account number to generate a different account. 
 
 
-## Accessing the Cosmos Hub Network
+## Accessing the Onomy Network
 
 In order to query the state and send transactions, you need a way to access the network. To do so, you can either run your own full-node, or connect to someone else's.
 
@@ -271,14 +271,14 @@ In order to connect to the full-node, you will need an address of the following 
 ## Setting Up `ochaind`
 
 ::: tip
-**Before setting up `ochaind`, make sure you have set up a way to [access the Cosmos Hub network](#accessing-the-cosmos-hub-network)**
+**Before setting up `ochaind`, make sure you have set up a way to [access the Onomy network](#accessing-the-cosmos-hub-network)**
 :::
 
 ::: warning
 **Please check that you are always using the latest stable release of `ochaind`**
 :::
 
-`ochaind` is the tool that enables you to interact with the node that runs on the Cosmos Hub network, whether you run it yourself or not. Let us set it up properly.
+`ochaind` is the tool that enables you to interact with the node that runs on the Onomy network, whether you run it yourself or not. Let us set it up properly.
 
 In order to set up `ochaind`, use the following command:
 
@@ -360,12 +360,12 @@ For each command, you can use the `-h` or `--help` flag to get more information.
 ## Sending Transactions
 
 ::: warning
-On Cosmos Hub mainnet, the accepted denom is `uatom`, where `1atom = 1,000,000uatom`
+On Onomy mainnet, the accepted denom is `uatom`, where `1atom = 1,000,000uatom`
 :::
 
 ### A Note on Gas and Fees
 
-Transactions on the Cosmos Hub network need to include a transaction fee in order to be processed. This fee pays for the gas required to run the transaction. The formula is the following:
+Transactions on the Onomy network need to include a transaction fee in order to be processed. This fee pays for the gas required to run the transaction. The formula is the following:
 
 ```
 fees = ceil(gas * gasPrices)
@@ -466,7 +466,7 @@ Double check with a block explorer if you interact with the network through a tr
 
 #### Primer on Governance
 
-The Cosmos Hub has a built-in governance system that lets bonded Atom holders vote on proposals. There are three types of proposal:
+The Onomy has a built-in governance system that lets bonded Atom holders vote on proposals. There are three types of proposal:
 
 - `Text Proposals`: These are the most basic type of proposals. They can be used to get the opinion of the network on a given topic. 
 - `Parameter Proposals`: These are used to update the value of an existing parameter.

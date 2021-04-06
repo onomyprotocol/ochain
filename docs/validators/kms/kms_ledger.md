@@ -78,7 +78,7 @@ This output indicates the validator key linked to this particular device is: `co
 
 Take note of the validator pubkey that appears in your screen. *We will use it in the next section.*
 
-## Gaia configuration
+## Ochain configuration
 
 You need to enable KMS access by editing `.ochain/config/config.toml`. In this file, modify `priv_validator_laddr` to create a listening address/port or a unix socket in `ochaind`.
 

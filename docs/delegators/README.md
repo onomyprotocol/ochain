@@ -6,7 +6,7 @@ parent:
 
 # Delegators 
 
-This folder contains documentation relevant to delegators of the Cosmos Hub and other `ochain` blockchains. 
+This folder contains documentation relevant to delegators of the Onomy and other `ochain` blockchains. 
 
 - [Delegator CLI Guide](./delegator-guide-cli.md)
 - [Delegators FAQ](./delegator-faq.md)

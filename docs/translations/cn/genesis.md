@@ -1,6 +1,6 @@
 # 创世（Genesis）文件
 
-本文档解释了 Cosmos Hub 主网的 genesis 文件是如何构建的。 它还解释了如何为自己的`ochain` testnet 创建一个 genesis 文件。
+本文档解释了 Onomy 主网的 genesis 文件是如何构建的。 它还解释了如何为自己的`ochain` testnet 创建一个 genesis 文件。
 
 请注意，您可以通过运行以下命令为您自己的 testnet 生成默认的 genesis 文件：
 

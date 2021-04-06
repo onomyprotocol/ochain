@@ -2,7 +2,7 @@
 order: 3
 -->
 
-# Únase a la red principal del Cosmos Hub
+# Únase a la red principal del Onomy
 
 ::: tip
 Vea el [repositorio para el lanzamiento](https://github.com/cosmos/launch) para la información de la red principal, incluyendo la versión correcta para el SDK de Cosmos que usar y detalles acerca del archivo génesis.
@@ -76,7 +76,7 @@ ochaind start
 
 Su nodo necesita saber cómo encontrar pares (_peers_). Necesita añadir nodos semilla en buen estado en `$HOME/.ochain/config/config.toml`. El repositorio para el [`lanzamiento`](https://github.com/cosmos/launch) contiene enlaces a algunos nodos semilla.
 
-Si estas semillas no funcionan, puedes encontrar más _seeds_ y _peers_ persistentes en un explorador de Cosmos Hub (puede encontrar una lista en la [página del lanzamiento](https://cosmos.network/launch))
+Si estas semillas no funcionan, puedes encontrar más _seeds_ y _peers_ persistentes en un explorador de Onomy (puede encontrar una lista en la [página del lanzamiento](https://cosmos.network/launch))
 
 También puedes preguntar por _peers_ en el [canal de Validadores de Riot](https://riot.im/app/#/room/#cosmos-validators:matrix.org)
 
@@ -140,7 +140,7 @@ Vea el estado de la red con el [Explorador de Cosmos](https://cosmos.network/lau
 
 ## Exportar el estado
 
-Gaia puede volcar todo el estado de la aplicación a un archivo JSON, que podría ser útil para el análisis manual y también puede ser usado como el archivo génesis para una nueva red.
+Ochain puede volcar todo el estado de la aplicación a un archivo JSON, que podría ser útil para el análisis manual y también puede ser usado como el archivo génesis para una nueva red.
 
 Exporte el estado con:
 

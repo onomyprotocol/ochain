@@ -206,7 +206,7 @@ ochaind status
 ```toml
 # /etc/systemd/system/ochaind.service
 [Unit]
-Description=Cosmos Gaia Node
+Description=Cosmos Ochain Node
 After=network.target
 
 [Service]

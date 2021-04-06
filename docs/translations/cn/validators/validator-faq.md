@@ -8,7 +8,7 @@
 
 ### 什么是验证人？
 
-[Cosmos Hub](../what-is-ochain.md)基于[Tendermint](https://tendermint.com/docs/introduction/what-is-tendermint.html)，它依靠一组验证人来保障网络的安全。验证人的作用是通过广播包含由验证人的私钥签名的加密签名的投票来运行全节点并参与共识。验证人在区块链中提交新的区块并获得收益作为报酬。他们还必须通过对提案进行投票来参与治理。验证人根据他们的总抵押股权来排位。
+[Onomy](../what-is-ochain.md)基于[Tendermint](https://tendermint.com/docs/introduction/what-is-tendermint.html)，它依靠一组验证人来保障网络的安全。验证人的作用是通过广播包含由验证人的私钥签名的加密签名的投票来运行全节点并参与共识。验证人在区块链中提交新的区块并获得收益作为报酬。他们还必须通过对提案进行投票来参与治理。验证人根据他们的总抵押股权来排位。
 
 
 ### 什么是'抵押'?

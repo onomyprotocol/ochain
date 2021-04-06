@@ -52,7 +52,7 @@ private_peer_ids = "node_ids_of_private_peers"
 
 By default, uppercase environment variables with the following prefixes will replace lowercase command-line flags:
 
-- `GA` (for Gaia flags)
+- `GA` (for Ochain flags)
 - `TM` (for Tendermint flags)
 - `BC` (for democli or basecli flags)
 

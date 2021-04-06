@@ -2,11 +2,11 @@
 order: 1
 -->
 
-# Gaia Client
+# Ochain Client
 
-## Gaia Daemon
+## Ochain Daemon
 
-`ochaind` is the tool that enables you to interact with the node that runs on the Cosmos Hub network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](../ochain-tutorials/installation.md).
+`ochaind` is the tool that enables you to interact with the node that runs on the Onomy network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](../ochain-tutorials/installation.md).
 
 ### Setting up ochaind
 
@@ -408,7 +408,7 @@ ochaind query staking validator <account_cosmosval>
 
 #### Bond Tokens
 
-On the Cosmos Hub mainnet, we delegate `uatom`, where `1atom = 1000000uatom`. Here's how you can bond tokens to a testnet validator (_i.e._ delegate):
+On the Onomy mainnet, we delegate `uatom`, where `1atom = 1000000uatom`. Here's how you can bond tokens to a testnet validator (_i.e._ delegate):
 
 ```bash
 ochaind tx staking delegate \
@@ -555,7 +555,7 @@ You can also query all of the delegations to a particular validator:
 
 ### Governance
 
-Governance is the process from which users in the Cosmos Hub can come to consensus
+Governance is the process from which users in the Onomy can come to consensus
 on software upgrades, parameters of the mainnet or signaling mechanisms through
 text proposals. This is done through voting on proposals, which will be submitted
 by `ATOM` holders on the mainnet.

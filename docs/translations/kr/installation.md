@@ -1,4 +1,4 @@
-## Gaia 설치하기
+## Ochain 설치하기
 
 이 가이드는 `ochaind`와 `ochaind`를 엔트리포인트를 시스템에 설치하는 방법을 설명합니다. `ochaind`와 `ochaind`가 설치된 서버를 통해 [풀노드](./join-testnet.md#run-a-full-node) 또는 [밸리데이터로](./validators/validator-setup.md)써 최신 테스트넷에 참가하실 수 있습니다.
 
@@ -18,7 +18,7 @@ source ~/.bash_profile
 
 ### 바이너리 설치하기
 
-다음은 최신 Gaia 버전을 설치하는 것입니다. 필요에 따라 `git checkout`을 통해 올바른 [릴리즈 버전](https://github.com/cosmos/ochain/releases)이 설치되어있는지 확인하세요.
+다음은 최신 Ochain 버전을 설치하는 것입니다. 필요에 따라 `git checkout`을 통해 올바른 [릴리즈 버전](https://github.com/cosmos/ochain/releases)이 설치되어있는지 확인하세요.
 
 ```bash
 git clone -b <latest-release-tag> https://github.com/cosmos/ochain

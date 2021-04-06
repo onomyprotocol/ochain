@@ -1,11 +1,11 @@
-# Cosmos Hub 2 Upgrade Instructions
+# Onomy 2 Upgrade Instructions
 
 The following document describes the necessary steps involved that full-node operators
 must take in order to upgrade from `cosmoshub-2` to `cosmoshub-3`. The Tendermint team
 will post an official updated genesis file, but it is recommended that validators
 execute the following instructions in order to verify the resulting genesis file.
 
-There is a strong social consensus around proposal `Cosmos Hub 3 Upgrade Proposal E`
+There is a strong social consensus around proposal `Onomy 3 Upgrade Proposal E`
 on `cosmoshub-2`. This indicates that the upgrade procedure should be performed
 on `December 11, 2019 at or around 14:27 UTC` on block `2,902,000`.
 
@@ -18,25 +18,25 @@ on `December 11, 2019 at or around 14:27 UTC` on block `2,902,000`.
 
 ## Preliminary
 
-Many changes have occurred to the Cosmos SDK and the Gaia application since the latest
+Many changes have occurred to the Cosmos SDK and the Ochain application since the latest
 major upgrade (`cosmoshub-2`). These changes notably consist of many new features,
 protocol changes, and application structural changes that favor developer ergonomics
 and application development.
 
 First and foremost, the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/) and the
-[Gaia](https://github.com/cosmos/ochain) application have been split into separate
-repositories. This allows for both the Cosmos SDK and Gaia to evolve naturally
+[Ochain](https://github.com/cosmos/ochain) application have been split into separate
+repositories. This allows for both the Cosmos SDK and Ochain to evolve naturally
 and independently. Thus, any future [releases](https://github.com/cosmos/ochain/releases)
-of Gaia going forward, including this one, will be built and tagged from this
+of Ochain going forward, including this one, will be built and tagged from this
 repository not the Cosmos SDK.
 
-Since the Cosmos SDK and Gaia have now been split into separate repositories, their
+Since the Cosmos SDK and Ochain have now been split into separate repositories, their
 versioning will also naturally diverge. In an attempt to decrease community confusion and strive for
 semantic versioning, the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/) will continue
-on its current versioning path (i.e. v0.36.x ) and the [Gaia](https://github.com/cosmos/ochain)
+on its current versioning path (i.e. v0.36.x ) and the [Ochain](https://github.com/cosmos/ochain)
 application will become v2.0.x.
 
-__[Gaia](https://github.com/cosmos/ochain) application v2.0.3 is
+__[Ochain](https://github.com/cosmos/ochain) application v2.0.3 is
 what full node operators will upgrade to and run in this next major upgrade__.
 
 ## Major Updates
@@ -86,12 +86,12 @@ v0.34.6+ of the _Cosmos SDK_ and restore to their latest snapshot before restart
 
 __Note__: It is assumed you are currently operating a full-node running v0.34.6+ of the _Cosmos SDK_.
 
-- The version/commit hash of Gaia v2.0.3: `2f6783e298f25ff4e12cb84549777053ab88749a`
+- The version/commit hash of Ochain v2.0.3: `2f6783e298f25ff4e12cb84549777053ab88749a`
 - The upgrade height as agreed upon by governance: **2,902,000**
 - You may obtain the canonical UTC timestamp of the exported block by any of the following methods:
   - Block explorer (e.g. [Hubble](https://hubble.figment.network/cosmos/chains/cosmoshub-2/blocks/2902000?format=json&kind=block))
   - Through manually querying an RPC node (e.g. `/block?height=2902000`)
-  - Through manually querying a Gaia REST client (e.g. `/blocks/2902000`)
+  - Through manually querying a Ochain REST client (e.g. `/blocks/2902000`)
 
 1. Verify you are currently running the correct version (v0.34.6+) of the _Cosmos SDK_:
 
@@ -125,7 +125,7 @@ __Note__: It is assumed you are currently operating a full-node running v0.34.6+
    ```
 
 4. At this point you now have a valid exported genesis state! All further steps now require
-v2.0.3 of [Gaia](https://github.com/cosmos/ochain).
+v2.0.3 of [Ochain](https://github.com/cosmos/ochain).
 
    **NOTE**: Go [1.13+](https://golang.org/dl/) is required!
 

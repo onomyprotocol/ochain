@@ -7,7 +7,7 @@ order: 4
 ::: tip Current Testnet
 See the [testnet repo](https://github.com/cosmos/testnets) for
 information on the latest testnet, including the correct version
-of Gaia to use and details about the genesis file.
+of Ochain to use and details about the genesis file.
 :::
 
 ::: warning
@@ -62,6 +62,6 @@ _NOTE_: If you have issues at this step, please check that you have the latest s
 :::
 
 Note we use `master` here since it contains the latest stable release.
-See the [testnet repo](https://github.com/cosmos/testnets) for details on which version is needed for which testnet, and the [Gaia release page](https://github.com/cosmos/ochain/releases) for details on each release.
+See the [testnet repo](https://github.com/cosmos/testnets) for details on which version is needed for which testnet, and the [Ochain release page](https://github.com/cosmos/ochain/releases) for details on each release.
 
 Your full node has been cleanly upgraded!

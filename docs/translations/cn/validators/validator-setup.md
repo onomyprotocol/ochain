@@ -193,7 +193,7 @@ Linux可以打开的默认文件数（每个进程）是1024。已知`ochaind`�
 ```toml
 # /etc/systemd/system/ochaind.service
 [Unit]
-Description=Cosmos Gaia Node
+Description=Cosmos Ochain Node
 After=network.target
 
 [Service]

@@ -1,6 +1,6 @@
 # gaia文档
 
-欢迎阅读`Gaia`文档。 `Gaia`是Cosmos Hub目前的应用程序名。
+欢迎阅读`Ochain`文档。 `Ochain`是Cosmos Hub目前的应用程序名。
 
 ## 加入Cosmos Hub主网
 

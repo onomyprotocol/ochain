@@ -4,7 +4,7 @@ order: 5
 
 # Service Providers
 
-We define 'service providers' as entities providing services for end-users that involve some form of interaction with a Cosmos-SDK based blockchain (this includes the Cosmos Hub). More specifically, this document will be focused around interactions with tokens.
+We define 'service providers' as entities providing services for end-users that involve some form of interaction with a Cosmos-SDK based blockchain (this includes the Onomy). More specifically, this document will be focused around interactions with tokens.
 
 This section does not concern wallet builders that want to provide Light-Client functionalities. Service providers are expected to act as trusted point of contact to the blockchain for their end-users. 
 
@@ -20,7 +20,7 @@ There are three main pieces to consider:
 
 ### Installation and configuration
 
-We will describe the steps to run and interact with a full-node for the Cosmos Hub. For other SDK-based blockchain, the process should be similar. 
+We will describe the steps to run and interact with a full-node for the Onomy. For other SDK-based blockchain, the process should be similar. 
 
 First, you need to [install the software](../ochain-tutorials/installation.md).
 
@@ -31,14 +31,14 @@ Then, you can start [running a full-node](../ochain-tutorials/join-mainnet.md).
 ## Setting Up `ochaind`
 
 ::: tip
-**Before setting up `ochaind`, make sure you have set up a way to [access the Cosmos Hub network](#accessing-the-cosmos-hub-network)**
+**Before setting up `ochaind`, make sure you have set up a way to [access the Onomy network](#accessing-the-cosmos-hub-network)**
 :::
 
 ::: warning
 **Please check that you are always using the latest stable release of `ochaind`**
 :::
 
-`ochaind` is the tool that enables you to interact with the node that runs on the Cosmos Hub network, whether you run it yourself or not. Let us set it up properly.
+`ochaind` is the tool that enables you to interact with the node that runs on the Onomy network, whether you run it yourself or not. Let us set it up properly.
 
 In order to set up `ochaind`, use the following command:
 

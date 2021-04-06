@@ -1,6 +1,6 @@
 module.exports = {
   theme: "cosmos",
-  title: "Cosmos Hub",
+  title: "Onomy",
   base: process.env.VUEPRESS_BASE || "/",
   themeConfig: {
     docsRepo: "cosmos/ochain",
@@ -84,7 +84,7 @@ module.exports = {
               url: "https://docs.cosmos.network"
             },
             {
-              title: "Cosmos Hub",
+              title: "Onomy",
               url: "https://hub.cosmos.network/"
             },
             {

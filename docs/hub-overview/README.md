@@ -4,6 +4,6 @@ parent:
   order: 1
 -->
 
-# Cosmos Hub
+# Onomy
 
 Read the [overview](./overview.md).
