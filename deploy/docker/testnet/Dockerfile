@@ -48,5 +48,5 @@ RUN ochaind init --chain-id=test-net validator1 && \
 
 
 # Run ochaind by default, omit entrypoint to ease using container with ochaincli
-CMD ["ochaind start"]
+CMD ["ochaind"]
 
