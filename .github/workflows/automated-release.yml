@@ -7,29 +7,28 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
+    name: ochain ${{ matrix.goarch }} for ${{ matrix.goos }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        go: [ 1.15 ]
-    name: ochain for ${{ matrix.os }}
+        goos: [ linux, windows, darwin ]
+        goarch: [ amd64, arm64, "386" ]
+        exclude:
+          - goarch: "386"
+            goos: darwin
+          - goarch: arm64
+            goos: windows
     steps:
       - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
-      - name: Setup Go ${{ matrix.go }}
-        uses: actions/setup-go@v2
+      - uses: wangyoucao577/go-release-action@v1.15
         with:
-          go-version: ${{ matrix.go }}
-        id: go
-
-      - name: Run GoReleaser
-        uses: goreleaser/goreleaser-action@master
-        with:
-          version: latest
-          args: release --rm-dist
-          workdir: ./cmd/ochaind
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          goos: ${{ matrix.goos }}
+          goarch: ${{ matrix.goarch }}
+          goversion: "https://dl.google.com/go/go1.15.11.linux-amd64.tar.gz"
+          project_path: "./cmd/ochain"
+          binary_name: "ochain"
