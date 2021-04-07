@@ -1,4 +1,4 @@
-name: Docker
+name: Development Testnet
 on: [ push, pull_request ]
 
 jobs:
