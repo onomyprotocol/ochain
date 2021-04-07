@@ -44,7 +44,8 @@ RUN ochaind init --chain-id=test-net validator1 && \
     ochaind keys add validator1 && \
     ochaind add-genesis-account $(ochaind keys show validator1 -a) 100000000stake,100000000validatortoken && \
     ochaind gentx validator1 100000000stake --chain-id test-net && \
-    ochaind collect-gentxs
+    ochaind collect-gentxs && \
+    ochaind validate-genesis
 
 
 # Run ochaind by default, omit entrypoint to ease using container with ochaincli
