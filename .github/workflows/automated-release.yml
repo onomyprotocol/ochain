@@ -32,4 +32,4 @@ jobs:
           args: release --rm-dist
           workdir: ./cmd/ochaind
         env:
-          GITHUB_TOKEN: ${{ secrets.GO_RELEASER_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
