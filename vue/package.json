@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "npm install && vue-cli-service serve",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name starport-vue --dest lib",
+    "build": "vue-cli-service build --name starport-vue --dest dist",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
