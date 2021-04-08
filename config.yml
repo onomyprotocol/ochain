@@ -1,14 +1,36 @@
 accounts:
-  - name: alice
-    coins: ["1000token", "100000000stake"]
-  - name: bob
-    coins: ["500token"]
+  - name: michael
+    coins: ["10000000nom"]
+  - name: charles
+    coins: ["10000000nom"]
+  - name: spout
+    coins: ["10000000nom"]
+build:
+  binary: "ochaind"
 validator:
-  name: alice
-  staked: "100000000stake"
+  name: charles
+  staked: "10000000nom"
 client:
   vuex:
     path: "vue/src/store"
 faucet:
-  name: bob 
-  coins: ["5token"]
+  name: spout
+  coins: ["10nom"]
+  coins_max: ["1000nom"]
+  port: 4500
+init:
+  keyring-backend: "os"
+host:
+  rpc: ":26659"
+  p2p: ":26658"
+  prof: ":6061"
+  grpc: ":9091"
+  api: ":1318"
+  frontend: ":80"
+  dev-ui: ":12346"
+genesis:
+  app_state:
+    staking:
+      params:
+        bond_denom: "nom"
+
