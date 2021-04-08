@@ -21,11 +21,11 @@ faucet:
 init:
   keyring-backend: "os"
 host:
-  rpc: ":26659"
+  rpc: ":26657"
   p2p: ":26658"
   prof: ":6061"
   grpc: ":9091"
-  api: ":1318"
+  api: ":1317"
   frontend: ":80"
   dev-ui: ":12346"
 genesis:

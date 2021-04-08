@@ -8,10 +8,11 @@ FROM golang:1.16-alpine AS build-env
 ENV PACKAGES curl make git libc-dev bash gcc linux-headers eudev-dev python3
 
 # Set working directory for the build
-WORKDIR /go/src/github.com/onomyprotocol/ochain
+WORKDIR /go/src/github.com/tendermint
 
 # Add source files
-COPY . .
+RUN git clone https://github.com/tendermint/starport.git
+WORKDIR /go/src/github.com/tendermint/starport
 
 # Install minimum necessary dependencies, build Cosmos SDK, remove packages
 RUN apk add --no-cache $PACKAGES
@@ -20,20 +21,20 @@ RUN make install
 # Final image
 FROM alpine:edge
 
-ENV OCHAIN /ochain
+ENV STARPORT /starport
 
 # Install ca-certificates
 RUN apk add --update ca-certificates
 
-RUN addgroup ochain && \
-    adduser -S -G ochain ochain -h "$OCHAIN"
+RUN addgroup starport && \
+    adduser -S -G starport starport -h "$STARPORT"
 
-USER ochain
+USER starport
 
-WORKDIR $OCHAIN
+WORKDIR $STARPORT
 
 # Copy over binaries from the build-env
-COPY --from=build-env /go/bin/ochaind /usr/bin/ochaind
+COPY --from=build-env /go/bin/starport /usr/bin/starport
 
 
 RUN ochaind init --chain-id=test-net validator1 && \
