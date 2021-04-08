@@ -1,12 +1,13 @@
-# This image is not yet distroless because distroless images expect thatthe entrypoint will be a .js file and ours is vue-cli-service
-# We use lopsided/archlinux for comptability
-
-FROM lopsided/archlinux
-COPY . .
-
-RUN pacman -Syyu --noconfirm npm
+# build stage
+FROM node:lts-alpine as build-stage
+WORKDIR /app
+COPY package*.json ./
 RUN npm install
+COPY . .
 RUN npm run build
 
-EXPOSE 8080
-CMD ["/usr/bin/npm","run","serve"]
+# production stage
+FROM nginx:stable-alpine as production-stage
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
