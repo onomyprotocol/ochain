@@ -36,10 +36,10 @@ WORKDIR $OCHAIN
 COPY --from=build-env /go/bin/ochaind /usr/bin/ochaind
 
 
-RUN ochaind init --chain-id=test-net validator1 && \
+RUN ochaind init --chain-id=ochain-testnet validator1 && \
     ochaind keys add validator1 && \
-    ochaind add-genesis-account $(ochaind keys show validator1 -a) 100000000stake,100000000validatortoken && \
-    ochaind gentx validator1 100000000stake --chain-id test-net && \
+    ochaind add-genesis-account $(ochaind keys show validator1 -a) 10000000nom && \
+    ochaind gentx validator1 10000000nom --chain-id ochain-testnet && \
     ochaind collect-gentxs
 
 
