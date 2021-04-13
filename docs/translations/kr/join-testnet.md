@@ -69,7 +69,7 @@ ochaind unsafe-reset-all
 이제 소프트웨어를 업그레이드할 시간입니다:
 
 ```bash
-git clone https://github.com/cosmos/cosmos-sdk.git
+git clone https://github.com/onomyprotocol/cosmos-sdk.git
 cd cosmos-sdk
 git fetch --all && git checkout master
 make install
@@ -79,7 +79,7 @@ make install
 _참고_: 이 단계에서 문제가 있으시다면 최신 스테이블 GO 버전이 설치되어있는지 확인해주세요.
 :::
 
-위 예시에서는 가장 최신 스테이블 릴리즈가 있는 `master`를 사용합니다. 테스트넷마다 운용하는 릴리즈가 다를 경우가 있으니 [testnet repo](https://github.com/cosmos/testnets)를 확인하셔서 어떤 버전이 필요한지 확인하시고, [SDK 릴리즈 페이지](https://github.com/cosmos/cosmos-sdk/releases)에서 각 릴리즈에 대한 정보를 확인하세요.
+위 예시에서는 가장 최신 스테이블 릴리즈가 있는 `master`를 사용합니다. 테스트넷마다 운용하는 릴리즈가 다를 경우가 있으니 [testnet repo](https://github.com/cosmos/testnets)를 확인하셔서 어떤 버전이 필요한지 확인하시고, [SDK 릴리즈 페이지](https://github.com/onomyprotocol/cosmos-sdk/releases)에서 각 릴리즈에 대한 정보를 확인하세요.
 
 이제 풀 노드가 깔끔하게 업그레이드 되었습니다!
 

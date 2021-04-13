@@ -11,11 +11,11 @@ import (
 
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/codec"
-	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/module"
+	"github.com/onomyprotocol/cosmos-sdk/client"
+	"github.com/onomyprotocol/cosmos-sdk/codec"
+	cdctypes "github.com/onomyprotocol/cosmos-sdk/codec/types"
+	sdk "github.com/onomyprotocol/cosmos-sdk/types"
+	"github.com/onomyprotocol/cosmos-sdk/types/module"
 	"github.com/onomyprotocol/ochain/x/ochain/client/cli"
 	"github.com/onomyprotocol/ochain/x/ochain/client/rest"
 	"github.com/onomyprotocol/ochain/x/ochain/keeper"

@@ -1,9 +1,9 @@
 package key
 
 import (
-	"github.com/cosmos/cosmos-sdk/crypto/hd"
-	"github.com/cosmos/cosmos-sdk/crypto/keyring"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/onomyprotocol/cosmos-sdk/crypto/hd"
+	"github.com/onomyprotocol/cosmos-sdk/crypto/keyring"
+	sdk "github.com/onomyprotocol/cosmos-sdk/types"
 	"github.com/cosmos/go-bip39"
 	"github.com/onomyprotocol/ochain/app"
 )

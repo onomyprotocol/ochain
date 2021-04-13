@@ -1,7 +1,7 @@
 # Breaking Changes
 
 This document collects all of the *breaking changes* from the CHANGELOG.md files
-located in the [Tendermint](https://github.com/tendermint/tendermint), [Cosmos SDK](https://github.com/cosmos/cosmos-sdk),
+located in the [Tendermint](https://github.com/tendermint/tendermint), [Cosmos SDK](https://github.com/onomyprotocol/cosmos-sdk),
 and [Ochain](https://github.com/cosmos/ochain) Github repositories.
 
 Its purpose is to provide a checklist for potential impact on deployments; however, the changelog located in each repository
@@ -81,7 +81,7 @@ serves other important details, such as bug fixes and feature improvements.
     - [crypto] [\#4721](https://github.com/tendermint/tendermint/pull/4721) Remove `SimpleHashFromMap()` and `SimpleProofsFromMap()` (@erikgrinaker)
     - [crypto] [\#4940](https://github.com/tendermint/tendermint/pull/4940) All keys have become `[]byte` instead of `[<size>]byte`. The byte method no longer returns the marshaled value but just the `[]byte` form of the data. (@marbar3778)
     - [crypto] [\#4988](https://github.com/tendermint/tendermint/pull/4988) Removal of key type multisig (@marbar3778)
-        - The key has been moved to the [Cosmos-SDK](https://github.com/cosmos/cosmos-sdk/blob/master/crypto/types/multisig/multisignature.go)
+        - The key has been moved to the [Cosmos-SDK](https://github.com/onomyprotocol/cosmos-sdk/blob/master/crypto/types/multisig/multisignature.go)
     - [crypto] [\#4989](https://github.com/tendermint/tendermint/pull/4989) Remove `Simple` prefixes from `SimpleProof`, `SimpleValueOp` & `SimpleProofNode`. (@marbar3778)
         - `merkle.Proof` has been renamed to `ProofOps`.
         - Protobuf messages `Proof` & `ProofOp` has been moved to `proto/crypto/merkle`
@@ -98,7 +98,7 @@ serves other important details, such as bug fixes and feature improvements.
     - [crypto] [\#5214](https://github.com/tendermint/tendermint/pull/5214) Change `GenPrivKeySecp256k1` to `GenPrivKeyFromSecret` to be consistent with other keys (@marbar3778)
     - [crypto] [\#5236](https://github.com/tendermint/tendermint/pull/5236) `VerifyBytes` is now `VerifySignature` on the `crypto.PubKey` interface (@marbar3778)
     - [evidence] [\#5361](https://github.com/tendermint/tendermint/pull/5361) Add LightClientAttackEvidence and change evidence interface (@cmwaters)
-    - [libs] [\#4831](https://github.com/tendermint/tendermint/pull/4831) Remove `Bech32` pkg from Tendermint. This pkg now lives in the [cosmos-sdk](https://github.com/cosmos/cosmos-sdk/tree/4173ea5ebad906dd9b45325bed69b9c655504867/types/bech32) (@marbar3778)
+    - [libs] [\#4831](https://github.com/tendermint/tendermint/pull/4831) Remove `Bech32` pkg from Tendermint. This pkg now lives in the [cosmos-sdk](https://github.com/onomyprotocol/cosmos-sdk/tree/4173ea5ebad906dd9b45325bed69b9c655504867/types/bech32) (@marbar3778)
     - [light] [\#4946](https://github.com/tendermint/tendermint/pull/4946) Rename `lite2` pkg to `light`. Remove `lite` implementation. (@marbar3778)
     - [light] [\#5347](https://github.com/tendermint/tendermint/pull/5347) `NewClient`, `NewHTTPClient`, `VerifyHeader` and `VerifyLightBlockAtHeight` now accept `context.Context` as 1st param (@melekes)
     - [merkle] [\#5193](https://github.com/tendermint/tendermint/pull/5193) `HashFromByteSlices` and `ProofsFromByteSlices` now return a hash for empty inputs, following RFC6962 (@erikgrinaker)
@@ -311,177 +311,177 @@ The issue has been fixed by reordering IBC ChanOpenAck and ChanOpenConfirm to ex
 
 It breaks state backward compatibility because the current change consumes more gas, which means that in an updated node a TX might fail because it ran out of gas whilst in older versions it would be successful.
 
-## [v0.40.0](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.40.0) - 2021-01-08
+## [v0.40.0](https://github.com/onomyprotocol/cosmos-sdk/releases/tag/v0.40.0) - 2021-01-08
 
 v0.40.0, known as the Stargate release of the Cosmos SDK, is one of the largest releases
-of the Cosmos SDK since launch. Please read through this changelog and [release notes](https://github.com/cosmos/cosmos-sdk/blob/v0.40.0/RELEASE_NOTES.md) to make
+of the Cosmos SDK since launch. Please read through this changelog and [release notes](https://github.com/onomyprotocol/cosmos-sdk/blob/v0.40.0/RELEASE_NOTES.md) to make
 sure you are aware of any relevant breaking changes.
 
 ### Client Breaking Changes
 
 * __CLI__
-    * (client/keys) [\#5889](https://github.com/cosmos/cosmos-sdk/pull/5889) remove `keys update` command.
-    * (x/auth) [\#5844](https://github.com/cosmos/cosmos-sdk/pull/5844) `tx sign` command now returns an error when signing is attempted with offline/multisig keys.
-    * (x/auth) [\#6108](https://github.com/cosmos/cosmos-sdk/pull/6108) `tx sign` command's `--validate-signatures` flag is migrated into a `tx validate-signatures` standalone command.
-    * (x/auth) [#7788](https://github.com/cosmos/cosmos-sdk/pull/7788) Remove `tx auth` subcommands, all auth subcommands exist as `tx <subcommand>`
-    * (x/genutil) [\#6651](https://github.com/cosmos/cosmos-sdk/pull/6651) The `gentx` command has been improved. No longer are `--from` and `--name` flags required. Instead, a single argument, `name`, is required which refers to the key pair in the Keyring. In addition, an optional
+    * (client/keys) [\#5889](https://github.com/onomyprotocol/cosmos-sdk/pull/5889) remove `keys update` command.
+    * (x/auth) [\#5844](https://github.com/onomyprotocol/cosmos-sdk/pull/5844) `tx sign` command now returns an error when signing is attempted with offline/multisig keys.
+    * (x/auth) [\#6108](https://github.com/onomyprotocol/cosmos-sdk/pull/6108) `tx sign` command's `--validate-signatures` flag is migrated into a `tx validate-signatures` standalone command.
+    * (x/auth) [#7788](https://github.com/onomyprotocol/cosmos-sdk/pull/7788) Remove `tx auth` subcommands, all auth subcommands exist as `tx <subcommand>`
+    * (x/genutil) [\#6651](https://github.com/onomyprotocol/cosmos-sdk/pull/6651) The `gentx` command has been improved. No longer are `--from` and `--name` flags required. Instead, a single argument, `name`, is required which refers to the key pair in the Keyring. In addition, an optional
       `--moniker` flag can be provided to override the moniker found in `config.toml`.
-    * (x/upgrade) [#7697](https://github.com/cosmos/cosmos-sdk/pull/7697) Rename flag name "--time" to "--upgrade-time", "--info" to "--upgrade-info", to keep it consistent with help message.
+    * (x/upgrade) [#7697](https://github.com/onomyprotocol/cosmos-sdk/pull/7697) Rename flag name "--time" to "--upgrade-time", "--info" to "--upgrade-info", to keep it consistent with help message.
 * __REST / Queriers__
-    * (api) [\#6426](https://github.com/cosmos/cosmos-sdk/pull/6426) The ability to start an out-of-process API REST server has now been removed. Instead, the API server is now started in-process along with the application and Tendermint. Configuration options have been added to `app.toml` to enable/disable the API server along with additional HTTP server options.
-    * (client) [\#7246](https://github.com/cosmos/cosmos-sdk/pull/7246) The rest server endpoint `/swagger-ui/` is replaced by `/swagger/`, and contains swagger documentation for gRPC Gateway routes in addition to legacy REST routes. Swagger API is exposed only if set in `app.toml`.
-    * (x/auth) [\#5702](https://github.com/cosmos/cosmos-sdk/pull/5702) The `x/auth` querier route has changed from `"acc"` to `"auth"`.
-    * (x/bank) [\#5572](https://github.com/cosmos/cosmos-sdk/pull/5572) The `/bank/balances/{address}` endpoint now returns all account balances or a single balance by denom when the `denom` query parameter is present.
-    * (x/evidence) [\#5952](https://github.com/cosmos/cosmos-sdk/pull/5952) Remove CLI and REST handlers for querying `x/evidence` parameters.
-    * (x/gov) [#6295](https://github.com/cosmos/cosmos-sdk/pull/6295) Fix typo in querying governance params.
+    * (api) [\#6426](https://github.com/onomyprotocol/cosmos-sdk/pull/6426) The ability to start an out-of-process API REST server has now been removed. Instead, the API server is now started in-process along with the application and Tendermint. Configuration options have been added to `app.toml` to enable/disable the API server along with additional HTTP server options.
+    * (client) [\#7246](https://github.com/onomyprotocol/cosmos-sdk/pull/7246) The rest server endpoint `/swagger-ui/` is replaced by `/swagger/`, and contains swagger documentation for gRPC Gateway routes in addition to legacy REST routes. Swagger API is exposed only if set in `app.toml`.
+    * (x/auth) [\#5702](https://github.com/onomyprotocol/cosmos-sdk/pull/5702) The `x/auth` querier route has changed from `"acc"` to `"auth"`.
+    * (x/bank) [\#5572](https://github.com/onomyprotocol/cosmos-sdk/pull/5572) The `/bank/balances/{address}` endpoint now returns all account balances or a single balance by denom when the `denom` query parameter is present.
+    * (x/evidence) [\#5952](https://github.com/onomyprotocol/cosmos-sdk/pull/5952) Remove CLI and REST handlers for querying `x/evidence` parameters.
+    * (x/gov) [#6295](https://github.com/onomyprotocol/cosmos-sdk/pull/6295) Fix typo in querying governance params.
 * __General__
-    * (baseapp) [\#6384](https://github.com/cosmos/cosmos-sdk/pull/6384) The `Result.Data` is now a Protocol Buffer encoded binary blob of type `TxData`. The `TxData` contains `Data` which contains a list of Protocol Buffer encoded message data and the corresponding message type.
-    * (client) [\#5783](https://github.com/cosmos/cosmos-sdk/issues/5783) Unify all coins representations on JSON client requests for governance proposals.
-    * (crypto) [\#7419](https://github.com/cosmos/cosmos-sdk/pull/7419) The SDK doesn't use Tendermint's `crypto.PubKey`
+    * (baseapp) [\#6384](https://github.com/onomyprotocol/cosmos-sdk/pull/6384) The `Result.Data` is now a Protocol Buffer encoded binary blob of type `TxData`. The `TxData` contains `Data` which contains a list of Protocol Buffer encoded message data and the corresponding message type.
+    * (client) [\#5783](https://github.com/onomyprotocol/cosmos-sdk/issues/5783) Unify all coins representations on JSON client requests for governance proposals.
+    * (crypto) [\#7419](https://github.com/onomyprotocol/cosmos-sdk/pull/7419) The SDK doesn't use Tendermint's `crypto.PubKey`
       interface anymore, and uses instead it's own `PubKey` interface, defined in `crypto/types`. Replace all instances of
       `crypto.PubKey` by `cryptotypes.Pubkey`.
-    * (store/rootmulti) [\#6390](https://github.com/cosmos/cosmos-sdk/pull/6390) Proofs of empty stores are no longer supported.
-    * (store/types) [\#5730](https://github.com/cosmos/cosmos-sdk/pull/5730) store.types.Cp() is removed in favour of types.CopyBytes().
-    * (x/auth) [\#6054](https://github.com/cosmos/cosmos-sdk/pull/6054) Remove custom JSON marshaling for base accounts as multsigs cannot be bech32 decoded.
-    * (x/auth/vesting) [\#6859](https://github.com/cosmos/cosmos-sdk/pull/6859) Custom JSON marshaling of vesting accounts was removed. Vesting accounts are now marshaled using their default proto or amino JSON representation.
-    * (x/bank) [\#5785](https://github.com/cosmos/cosmos-sdk/issues/5785) In x/bank errors, JSON strings coerced to valid UTF-8 bytes at JSON marshalling time
+    * (store/rootmulti) [\#6390](https://github.com/onomyprotocol/cosmos-sdk/pull/6390) Proofs of empty stores are no longer supported.
+    * (store/types) [\#5730](https://github.com/onomyprotocol/cosmos-sdk/pull/5730) store.types.Cp() is removed in favour of types.CopyBytes().
+    * (x/auth) [\#6054](https://github.com/onomyprotocol/cosmos-sdk/pull/6054) Remove custom JSON marshaling for base accounts as multsigs cannot be bech32 decoded.
+    * (x/auth/vesting) [\#6859](https://github.com/onomyprotocol/cosmos-sdk/pull/6859) Custom JSON marshaling of vesting accounts was removed. Vesting accounts are now marshaled using their default proto or amino JSON representation.
+    * (x/bank) [\#5785](https://github.com/onomyprotocol/cosmos-sdk/issues/5785) In x/bank errors, JSON strings coerced to valid UTF-8 bytes at JSON marshalling time
       are now replaced by human-readable expressions. This change can potentially break compatibility with all those client side tools
       that parse log messages.
-    * (x/evidence) [\#7538](https://github.com/cosmos/cosmos-sdk/pull/7538) The ABCI's `Result.Data` field for
+    * (x/evidence) [\#7538](https://github.com/onomyprotocol/cosmos-sdk/pull/7538) The ABCI's `Result.Data` field for
       `MsgSubmitEvidence` responses does not contain the raw evidence's hash, but the protobuf encoded
       `MsgSubmitEvidenceResponse` struct.
-    * (x/gov) [\#7533](https://github.com/cosmos/cosmos-sdk/pull/7533) The ABCI's `Result.Data` field for
+    * (x/gov) [\#7533](https://github.com/onomyprotocol/cosmos-sdk/pull/7533) The ABCI's `Result.Data` field for
       `MsgSubmitProposal` responses does not contain a raw binary encoding of the `proposalID`, but the protobuf encoded
       `MsgSubmitSubmitProposalResponse` struct.
-    * (x/gov) [\#6859](https://github.com/cosmos/cosmos-sdk/pull/6859) `ProposalStatus` and `VoteOption` are now JSON serialized using its protobuf name, so expect names like `PROPOSAL_STATUS_DEPOSIT_PERIOD` as opposed to `DepositPeriod`.
-    * (x/staking) [\#7499](https://github.com/cosmos/cosmos-sdk/pull/7499) `BondStatus` is now a protobuf `enum` instead
+    * (x/gov) [\#6859](https://github.com/onomyprotocol/cosmos-sdk/pull/6859) `ProposalStatus` and `VoteOption` are now JSON serialized using its protobuf name, so expect names like `PROPOSAL_STATUS_DEPOSIT_PERIOD` as opposed to `DepositPeriod`.
+    * (x/staking) [\#7499](https://github.com/onomyprotocol/cosmos-sdk/pull/7499) `BondStatus` is now a protobuf `enum` instead
       of an `int32`, and JSON serialized using its protobuf name, so expect names like `BOND_STATUS_UNBONDING` as opposed
       to `Unbonding`.
-    * (x/staking) [\#7556](https://github.com/cosmos/cosmos-sdk/pull/7556) The ABCI's `Result.Data` field for
+    * (x/staking) [\#7556](https://github.com/onomyprotocol/cosmos-sdk/pull/7556) The ABCI's `Result.Data` field for
       `MsgBeginRedelegate` and `MsgUndelegate` responses does not contain custom binary marshaled `completionTime`, but the
       protobuf encoded `MsgBeginRedelegateResponse` and `MsgUndelegateResponse` structs respectively
 
 ### API Breaking Changes
 
 * __Baseapp / Client__
-    * (AppModule) [\#7518](https://github.com/cosmos/cosmos-sdk/pull/7518) [\#7584](https://github.com/cosmos/cosmos-sdk/pull/7584) Rename `AppModule.RegisterQueryServices` to `AppModule.RegisterServices`, as this method now registers multiple services (the gRPC query service and the protobuf Msg service). A `Configurator` struct is used to hold the different services.
-    * (baseapp) [\#5865](https://github.com/cosmos/cosmos-sdk/pull/5865) The `SimulationResponse` returned from tx simulation is now JSON encoded instead of Amino binary.
-    * (client) [\#6290](https://github.com/cosmos/cosmos-sdk/pull/6290) `CLIContext` is renamed to `Context`. `Context` and all related methods have been moved from package context to client.
-    * (client) [\#6525](https://github.com/cosmos/cosmos-sdk/pull/6525) Removed support for `indent` in JSON responses. Clients should consider piping to an external tool such as `jq`.
-    * (client) [\#8107](https://github.com/cosmos/cosmos-sdk/pull/8107) Renamed `PrintOutput` and `PrintOutputLegacy`
+    * (AppModule) [\#7518](https://github.com/onomyprotocol/cosmos-sdk/pull/7518) [\#7584](https://github.com/onomyprotocol/cosmos-sdk/pull/7584) Rename `AppModule.RegisterQueryServices` to `AppModule.RegisterServices`, as this method now registers multiple services (the gRPC query service and the protobuf Msg service). A `Configurator` struct is used to hold the different services.
+    * (baseapp) [\#5865](https://github.com/onomyprotocol/cosmos-sdk/pull/5865) The `SimulationResponse` returned from tx simulation is now JSON encoded instead of Amino binary.
+    * (client) [\#6290](https://github.com/onomyprotocol/cosmos-sdk/pull/6290) `CLIContext` is renamed to `Context`. `Context` and all related methods have been moved from package context to client.
+    * (client) [\#6525](https://github.com/onomyprotocol/cosmos-sdk/pull/6525) Removed support for `indent` in JSON responses. Clients should consider piping to an external tool such as `jq`.
+    * (client) [\#8107](https://github.com/onomyprotocol/cosmos-sdk/pull/8107) Renamed `PrintOutput` and `PrintOutputLegacy`
       methods of the `context.Client` object to `PrintProto` and `PrintObjectLegacy`.
-    * (client/flags) [\#6632](https://github.com/cosmos/cosmos-sdk/pull/6632) Remove NewCompletionCmd(), the function is now available in tendermint.
-    * (client/input) [\#5904](https://github.com/cosmos/cosmos-sdk/pull/5904) Removal of unnecessary `GetCheckPassword`, `PrintPrefixed` functions.
-    * (client/keys) [\#5889](https://github.com/cosmos/cosmos-sdk/pull/5889) Rename `NewKeyBaseFromDir()` -> `NewLegacyKeyBaseFromDir()`.
-    * (client/keys) [\#5820](https://github.com/cosmos/cosmos-sdk/pull/5820/) Removed method CloseDB from Keybase interface.
-    * (client/rpc) [\#6290](https://github.com/cosmos/cosmos-sdk/pull/6290) `client` package and subdirs reorganization.
-    * (client/lcd) [\#6290](https://github.com/cosmos/cosmos-sdk/pull/6290) `CliCtx` of struct `RestServer` in package client/lcd has been renamed to `ClientCtx`.
-    * (codec) [\#6330](https://github.com/cosmos/cosmos-sdk/pull/6330) `codec.RegisterCrypto` has been moved to the `crypto/codec` package and the global `codec.Cdc` Amino instance has been deprecated and moved to the `codec/legacy_global` package.
-    * (codec) [\#8080](https://github.com/cosmos/cosmos-sdk/pull/8080) Updated the `codec.Marshaler` interface
+    * (client/flags) [\#6632](https://github.com/onomyprotocol/cosmos-sdk/pull/6632) Remove NewCompletionCmd(), the function is now available in tendermint.
+    * (client/input) [\#5904](https://github.com/onomyprotocol/cosmos-sdk/pull/5904) Removal of unnecessary `GetCheckPassword`, `PrintPrefixed` functions.
+    * (client/keys) [\#5889](https://github.com/onomyprotocol/cosmos-sdk/pull/5889) Rename `NewKeyBaseFromDir()` -> `NewLegacyKeyBaseFromDir()`.
+    * (client/keys) [\#5820](https://github.com/onomyprotocol/cosmos-sdk/pull/5820/) Removed method CloseDB from Keybase interface.
+    * (client/rpc) [\#6290](https://github.com/onomyprotocol/cosmos-sdk/pull/6290) `client` package and subdirs reorganization.
+    * (client/lcd) [\#6290](https://github.com/onomyprotocol/cosmos-sdk/pull/6290) `CliCtx` of struct `RestServer` in package client/lcd has been renamed to `ClientCtx`.
+    * (codec) [\#6330](https://github.com/onomyprotocol/cosmos-sdk/pull/6330) `codec.RegisterCrypto` has been moved to the `crypto/codec` package and the global `codec.Cdc` Amino instance has been deprecated and moved to the `codec/legacy_global` package.
+    * (codec) [\#8080](https://github.com/onomyprotocol/cosmos-sdk/pull/8080) Updated the `codec.Marshaler` interface
         * Moved `MarshalAny` and `UnmarshalAny` helper functions to `codec.Marshaler` and renamed to `MarshalInterface` and
           `UnmarshalInterface` respectively. These functions must take interface as a parameter (not a concrete type nor `Any`
           object). Underneath they use `Any` wrapping for correct protobuf serialization.
-    * (crypto) [\#6780](https://github.com/cosmos/cosmos-sdk/issues/6780) Move ledger code to its own package.
-    * (crypto/types/multisig) [\#6373](https://github.com/cosmos/cosmos-sdk/pull/6373) `multisig.Multisignature` has been renamed  to `AminoMultisignature`
+    * (crypto) [\#6780](https://github.com/onomyprotocol/cosmos-sdk/issues/6780) Move ledger code to its own package.
+    * (crypto/types/multisig) [\#6373](https://github.com/onomyprotocol/cosmos-sdk/pull/6373) `multisig.Multisignature` has been renamed  to `AminoMultisignature`
     * (codec) `*codec.LegacyAmino` is now a wrapper around Amino which provides backwards compatibility with protobuf `Any`. ALL legacy code should use `*codec.LegacyAmino` instead of `*amino.Codec` directly
-    * (crypto) [\#5880](https://github.com/cosmos/cosmos-sdk/pull/5880) Merge `crypto/keys/mintkey` into `crypto`.
-    * (crypto/hd) [\#5904](https://github.com/cosmos/cosmos-sdk/pull/5904) `crypto/keys/hd` moved to `crypto/hd`.
+    * (crypto) [\#5880](https://github.com/onomyprotocol/cosmos-sdk/pull/5880) Merge `crypto/keys/mintkey` into `crypto`.
+    * (crypto/hd) [\#5904](https://github.com/onomyprotocol/cosmos-sdk/pull/5904) `crypto/keys/hd` moved to `crypto/hd`.
     * (crypto/keyring):
-        * [\#5866](https://github.com/cosmos/cosmos-sdk/pull/5866) Rename `crypto/keys/` to `crypto/keyring/`.
-        * [\#5904](https://github.com/cosmos/cosmos-sdk/pull/5904) `Keybase` -> `Keyring` interfaces migration. `LegacyKeybase` interface is added in order
+        * [\#5866](https://github.com/onomyprotocol/cosmos-sdk/pull/5866) Rename `crypto/keys/` to `crypto/keyring/`.
+        * [\#5904](https://github.com/onomyprotocol/cosmos-sdk/pull/5904) `Keybase` -> `Keyring` interfaces migration. `LegacyKeybase` interface is added in order
           to guarantee limited backward compatibility with the old Keybase interface for the sole purpose of migrating keys across the new keyring backends. `NewLegacy`
-          constructor is provided [\#5889](https://github.com/cosmos/cosmos-sdk/pull/5889) to allow for smooth migration of keys from the legacy LevelDB based implementation
-          to new keyring backends. Plus, the package and the new keyring no longer depends on the sdk.Config singleton. Please consult the [package documentation](https://github.com/cosmos/cosmos-sdk/tree/master/crypto/keyring/doc.go) for more
+          constructor is provided [\#5889](https://github.com/onomyprotocol/cosmos-sdk/pull/5889) to allow for smooth migration of keys from the legacy LevelDB based implementation
+          to new keyring backends. Plus, the package and the new keyring no longer depends on the sdk.Config singleton. Please consult the [package documentation](https://github.com/onomyprotocol/cosmos-sdk/tree/master/crypto/keyring/doc.go) for more
           information on how to implement the new `Keyring` interface.
-        * [\#5858](https://github.com/cosmos/cosmos-sdk/pull/5858) Make Keyring store keys by name and address's hexbytes representation.
-    * (export) [\#5952](https://github.com/cosmos/cosmos-sdk/pull/5952) `AppExporter` now returns ABCI consensus parameters to be included in marshaled exported state. These parameters must be returned from the application via the `BaseApp`.
+        * [\#5858](https://github.com/onomyprotocol/cosmos-sdk/pull/5858) Make Keyring store keys by name and address's hexbytes representation.
+    * (export) [\#5952](https://github.com/onomyprotocol/cosmos-sdk/pull/5952) `AppExporter` now returns ABCI consensus parameters to be included in marshaled exported state. These parameters must be returned from the application via the `BaseApp`.
     * (simapp) Deprecating and renaming `MakeEncodingConfig` to `MakeTestEncodingConfig` (both in `simapp` and `simapp/params` packages).
-    * (store) [\#5803](https://github.com/cosmos/cosmos-sdk/pull/5803) The `store.CommitMultiStore` interface now includes the new `snapshots.Snapshotter` interface as well.
-    * (types) [\#5579](https://github.com/cosmos/cosmos-sdk/pull/5579) The `keepRecent` field has been removed from the `PruningOptions` type.
+    * (store) [\#5803](https://github.com/onomyprotocol/cosmos-sdk/pull/5803) The `store.CommitMultiStore` interface now includes the new `snapshots.Snapshotter` interface as well.
+    * (types) [\#5579](https://github.com/onomyprotocol/cosmos-sdk/pull/5579) The `keepRecent` field has been removed from the `PruningOptions` type.
       The `PruningOptions` type now only includes fields `KeepEvery` and `SnapshotEvery`, where `KeepEvery`
       determines which committed heights are flushed to disk and `SnapshotEvery` determines which of these
       heights are kept after pruning. The `IsValid` method should be called whenever using these options. Methods
       `SnapshotVersion` and `FlushVersion` accept a version arugment and determine if the version should be
       flushed to disk or kept as a snapshot. Note, `KeepRecent` is automatically inferred from the options
       and provided directly the IAVL store.
-    * (types) [\#5533](https://github.com/cosmos/cosmos-sdk/pull/5533) Refactored `AppModuleBasic` and `AppModuleGenesis`
+    * (types) [\#5533](https://github.com/onomyprotocol/cosmos-sdk/pull/5533) Refactored `AppModuleBasic` and `AppModuleGenesis`
       to now accept a `codec.JSONMarshaler` for modular serialization of genesis state.
-    * (types/rest) [\#5779](https://github.com/cosmos/cosmos-sdk/pull/5779) Drop unused Parse{Int64OrReturnBadRequest,QueryParamBool}() functions.
+    * (types/rest) [\#5779](https://github.com/onomyprotocol/cosmos-sdk/pull/5779) Drop unused Parse{Int64OrReturnBadRequest,QueryParamBool}() functions.
 * __Modules__
-    * (modules) [\#7243](https://github.com/cosmos/cosmos-sdk/pull/7243) Rename `RegisterCodec` to `RegisterLegacyAminoCodec` and `codec.New()` is now renamed to `codec.NewLegacyAmino()`
-    * (modules) [\#6564](https://github.com/cosmos/cosmos-sdk/pull/6564) Constant `DefaultParamspace` is removed from all modules, use ModuleName instead.
-    * (modules) [\#5989](https://github.com/cosmos/cosmos-sdk/pull/5989) `AppModuleBasic.GetTxCmd` now takes a single `CLIContext` parameter.
-    * (modules) [\#5664](https://github.com/cosmos/cosmos-sdk/pull/5664) Remove amino `Codec` from simulation `StoreDecoder`, which now returns a function closure in order to unmarshal the key-value pairs.
-    * (modules) [\#5555](https://github.com/cosmos/cosmos-sdk/pull/5555) Move `x/auth/client/utils/` types and functions to `x/auth/client/`.
-    * (modules) [\#5572](https://github.com/cosmos/cosmos-sdk/pull/5572) Move account balance logic and APIs from `x/auth` to `x/bank`.
-    * (modules) [\#6326](https://github.com/cosmos/cosmos-sdk/pull/6326) `AppModuleBasic.GetQueryCmd` now takes a single `client.Context` parameter.
-    * (modules) [\#6336](https://github.com/cosmos/cosmos-sdk/pull/6336) `AppModuleBasic.RegisterQueryService` method was added to support gRPC queries, and `QuerierRoute` and `NewQuerierHandler` were deprecated.
-    * (modules) [\#6311](https://github.com/cosmos/cosmos-sdk/issues/6311) Remove `alias.go` usage
-    * (modules) [\#6447](https://github.com/cosmos/cosmos-sdk/issues/6447) Rename `blacklistedAddrs` to `blockedAddrs`.
-    * (modules) [\#6834](https://github.com/cosmos/cosmos-sdk/issues/6834) Add `RegisterInterfaces` method to `AppModuleBasic` to support registration of protobuf interface types.
-    * (modules) [\#6734](https://github.com/cosmos/cosmos-sdk/issues/6834) Add `TxEncodingConfig` parameter to `AppModuleBasic.ValidateGenesis` command to support JSON tx decoding in `genutil`.
-    * (modules) [#7764](https://github.com/cosmos/cosmos-sdk/pull/7764) Added module initialization options:
+    * (modules) [\#7243](https://github.com/onomyprotocol/cosmos-sdk/pull/7243) Rename `RegisterCodec` to `RegisterLegacyAminoCodec` and `codec.New()` is now renamed to `codec.NewLegacyAmino()`
+    * (modules) [\#6564](https://github.com/onomyprotocol/cosmos-sdk/pull/6564) Constant `DefaultParamspace` is removed from all modules, use ModuleName instead.
+    * (modules) [\#5989](https://github.com/onomyprotocol/cosmos-sdk/pull/5989) `AppModuleBasic.GetTxCmd` now takes a single `CLIContext` parameter.
+    * (modules) [\#5664](https://github.com/onomyprotocol/cosmos-sdk/pull/5664) Remove amino `Codec` from simulation `StoreDecoder`, which now returns a function closure in order to unmarshal the key-value pairs.
+    * (modules) [\#5555](https://github.com/onomyprotocol/cosmos-sdk/pull/5555) Move `x/auth/client/utils/` types and functions to `x/auth/client/`.
+    * (modules) [\#5572](https://github.com/onomyprotocol/cosmos-sdk/pull/5572) Move account balance logic and APIs from `x/auth` to `x/bank`.
+    * (modules) [\#6326](https://github.com/onomyprotocol/cosmos-sdk/pull/6326) `AppModuleBasic.GetQueryCmd` now takes a single `client.Context` parameter.
+    * (modules) [\#6336](https://github.com/onomyprotocol/cosmos-sdk/pull/6336) `AppModuleBasic.RegisterQueryService` method was added to support gRPC queries, and `QuerierRoute` and `NewQuerierHandler` were deprecated.
+    * (modules) [\#6311](https://github.com/onomyprotocol/cosmos-sdk/issues/6311) Remove `alias.go` usage
+    * (modules) [\#6447](https://github.com/onomyprotocol/cosmos-sdk/issues/6447) Rename `blacklistedAddrs` to `blockedAddrs`.
+    * (modules) [\#6834](https://github.com/onomyprotocol/cosmos-sdk/issues/6834) Add `RegisterInterfaces` method to `AppModuleBasic` to support registration of protobuf interface types.
+    * (modules) [\#6734](https://github.com/onomyprotocol/cosmos-sdk/issues/6834) Add `TxEncodingConfig` parameter to `AppModuleBasic.ValidateGenesis` command to support JSON tx decoding in `genutil`.
+    * (modules) [#7764](https://github.com/onomyprotocol/cosmos-sdk/pull/7764) Added module initialization options:
         * `server/types.AppExporter` requires extra argument: `AppOptions`.
         * `server.AddCommands` requires extra argument: `addStartFlags types.ModuleInitFlags`
-        * `x/crisis.NewAppModule` has a new attribute: `skipGenesisInvariants`. [PR](https://github.com/cosmos/cosmos-sdk/pull/7764)
-    * (types) [\#6327](https://github.com/cosmos/cosmos-sdk/pull/6327) `sdk.Msg` now inherits `proto.Message`, as a result all `sdk.Msg` types now use pointer semantics.
-    * (types) [\#7032](https://github.com/cosmos/cosmos-sdk/pull/7032) All types ending with `ID` (e.g. `ProposalID`) now end with `Id` (e.g. `ProposalId`), to match default Protobuf generated format. Also see [\#7033](https://github.com/cosmos/cosmos-sdk/pull/7033) for more details.
-    * (x/auth) [\#6029](https://github.com/cosmos/cosmos-sdk/pull/6029) Module accounts have been moved from `x/supply` to `x/auth`.
-    * (x/auth) [\#6443](https://github.com/cosmos/cosmos-sdk/issues/6443) Move `FeeTx` and `TxWithMemo` interfaces from `x/auth/ante` to `types`.
-    * (x/auth) [\#7006](https://github.com/cosmos/cosmos-sdk/pull/7006) All `AccountRetriever` methods now take `client.Context` as a parameter instead of as a struct member.
-    * (x/auth) [\#6270](https://github.com/cosmos/cosmos-sdk/pull/6270) The passphrase argument has been removed from the signature of the following functions and methods: `BuildAndSign`, ` MakeSignature`, ` SignStdTx`, `TxBuilder.BuildAndSign`, `TxBuilder.Sign`, `TxBuilder.SignStdTx`
-    * (x/auth) [\#6428](https://github.com/cosmos/cosmos-sdk/issues/6428):
+        * `x/crisis.NewAppModule` has a new attribute: `skipGenesisInvariants`. [PR](https://github.com/onomyprotocol/cosmos-sdk/pull/7764)
+    * (types) [\#6327](https://github.com/onomyprotocol/cosmos-sdk/pull/6327) `sdk.Msg` now inherits `proto.Message`, as a result all `sdk.Msg` types now use pointer semantics.
+    * (types) [\#7032](https://github.com/onomyprotocol/cosmos-sdk/pull/7032) All types ending with `ID` (e.g. `ProposalID`) now end with `Id` (e.g. `ProposalId`), to match default Protobuf generated format. Also see [\#7033](https://github.com/onomyprotocol/cosmos-sdk/pull/7033) for more details.
+    * (x/auth) [\#6029](https://github.com/onomyprotocol/cosmos-sdk/pull/6029) Module accounts have been moved from `x/supply` to `x/auth`.
+    * (x/auth) [\#6443](https://github.com/onomyprotocol/cosmos-sdk/issues/6443) Move `FeeTx` and `TxWithMemo` interfaces from `x/auth/ante` to `types`.
+    * (x/auth) [\#7006](https://github.com/onomyprotocol/cosmos-sdk/pull/7006) All `AccountRetriever` methods now take `client.Context` as a parameter instead of as a struct member.
+    * (x/auth) [\#6270](https://github.com/onomyprotocol/cosmos-sdk/pull/6270) The passphrase argument has been removed from the signature of the following functions and methods: `BuildAndSign`, ` MakeSignature`, ` SignStdTx`, `TxBuilder.BuildAndSign`, `TxBuilder.Sign`, `TxBuilder.SignStdTx`
+    * (x/auth) [\#6428](https://github.com/onomyprotocol/cosmos-sdk/issues/6428):
         * `NewAnteHandler` and `NewSigVerificationDecorator` both now take a `SignModeHandler` parameter.
         * `SignatureVerificationGasConsumer` now has the signature: `func(meter sdk.GasMeter, sig signing.SignatureV2, params types.Params) error`.
         * The `SigVerifiableTx` interface now has a `GetSignaturesV2() ([]signing.SignatureV2, error)` method and no longer has the `GetSignBytes` method.
-    * (x/auth/tx) [\#8106](https://github.com/cosmos/cosmos-sdk/pull/8106) change related to missing append functionality in
+    * (x/auth/tx) [\#8106](https://github.com/onomyprotocol/cosmos-sdk/pull/8106) change related to missing append functionality in
       client transaction signing
         + added `overwriteSig` argument to `x/auth/client.SignTx` and `client/tx.Sign` functions.
         + removed `x/auth/tx.go:wrapper.GetSignatures`. The `wrapper` provides `TxBuilder` functionality, and it's a private
           structure. That function was not used at all and it's not exposed through the `TxBuilder` interface.
-    * (x/bank) [\#7327](https://github.com/cosmos/cosmos-sdk/pull/7327) AddCoins and SubtractCoins no longer return a resultingValue and will only return an error.
-    * (x/capability) [#7918](https://github.com/cosmos/cosmos-sdk/pull/7918) Add x/capability safety checks:
+    * (x/bank) [\#7327](https://github.com/onomyprotocol/cosmos-sdk/pull/7327) AddCoins and SubtractCoins no longer return a resultingValue and will only return an error.
+    * (x/capability) [#7918](https://github.com/onomyprotocol/cosmos-sdk/pull/7918) Add x/capability safety checks:
         * All outward facing APIs will now check that capability is not nil and name is not empty before performing any state-machine changes
         * `SetIndex` has been renamed to `InitializeIndex`
-    * (x/evidence) [\#7251](https://github.com/cosmos/cosmos-sdk/pull/7251) New evidence types and light client evidence handling. The module function names changed.
-    * (x/evidence) [\#5952](https://github.com/cosmos/cosmos-sdk/pull/5952) Remove APIs for getting and setting `x/evidence` parameters. `BaseApp` now uses a `ParamStore` to manage Tendermint consensus parameters which is managed via the `x/params` `Substore` type.
-    * (x/gov) [\#6147](https://github.com/cosmos/cosmos-sdk/pull/6147) The `Content` field on `Proposal` and `MsgSubmitProposal`
+    * (x/evidence) [\#7251](https://github.com/onomyprotocol/cosmos-sdk/pull/7251) New evidence types and light client evidence handling. The module function names changed.
+    * (x/evidence) [\#5952](https://github.com/onomyprotocol/cosmos-sdk/pull/5952) Remove APIs for getting and setting `x/evidence` parameters. `BaseApp` now uses a `ParamStore` to manage Tendermint consensus parameters which is managed via the `x/params` `Substore` type.
+    * (x/gov) [\#6147](https://github.com/onomyprotocol/cosmos-sdk/pull/6147) The `Content` field on `Proposal` and `MsgSubmitProposal`
       is now `Any` in concordance with [ADR 019](docs/architecture/adr-019-protobuf-state-encoding.md) and `GetContent` should now
       be used to retrieve the actual proposal `Content`. Also the `NewMsgSubmitProposal` constructor now may return an `error`
-    * (x/ibc) [\#6374](https://github.com/cosmos/cosmos-sdk/pull/6374) `VerifyMembership` and `VerifyNonMembership` now take a `specs []string` argument to specify the proof format used for verification. Most SDK chains can simply use `commitmenttypes.GetSDKSpecs()` for this argument.
-    * (x/params) [\#5619](https://github.com/cosmos/cosmos-sdk/pull/5619) The `x/params` keeper now accepts a `codec.Marshaller` instead of
+    * (x/ibc) [\#6374](https://github.com/onomyprotocol/cosmos-sdk/pull/6374) `VerifyMembership` and `VerifyNonMembership` now take a `specs []string` argument to specify the proof format used for verification. Most SDK chains can simply use `commitmenttypes.GetSDKSpecs()` for this argument.
+    * (x/params) [\#5619](https://github.com/onomyprotocol/cosmos-sdk/pull/5619) The `x/params` keeper now accepts a `codec.Marshaller` instead of
       a reference to an amino codec. Amino is still used for JSON serialization.
-    * (x/staking) [\#6451](https://github.com/cosmos/cosmos-sdk/pull/6451) `DefaultParamspace` and `ParamKeyTable` in staking module are moved from keeper to types to enforce consistency.
-    * (x/staking) [\#7419](https://github.com/cosmos/cosmos-sdk/pull/7419) The `TmConsPubKey` method on ValidatorI has been
+    * (x/staking) [\#6451](https://github.com/onomyprotocol/cosmos-sdk/pull/6451) `DefaultParamspace` and `ParamKeyTable` in staking module are moved from keeper to types to enforce consistency.
+    * (x/staking) [\#7419](https://github.com/onomyprotocol/cosmos-sdk/pull/7419) The `TmConsPubKey` method on ValidatorI has been
       removed and replaced instead by `ConsPubKey` (which returns a SDK `cryptotypes.PubKey`) and `TmConsPublicKey` (which
       returns a Tendermint proto PublicKey).
-    * (x/staking/types) [\#7447](https://github.com/cosmos/cosmos-sdk/issues/7447) Remove bech32 PubKey support:
+    * (x/staking/types) [\#7447](https://github.com/onomyprotocol/cosmos-sdk/issues/7447) Remove bech32 PubKey support:
         * `ValidatorI` interface update. `GetConsPubKey` renamed to `TmConsPubKey` (consensus public key must be a tendermint key). `TmConsPubKey`, `GetConsAddr` methods return error.
         * `Validator` update. Methods changed in `ValidatorI` (as described above) and `ToTmValidator` return error.
         * `Validator.ConsensusPubkey` type changed from `string` to `codectypes.Any`.
         * `MsgCreateValidator.Pubkey` type changed from `string` to `codectypes.Any`.
-    * (x/supply) [\#6010](https://github.com/cosmos/cosmos-sdk/pull/6010) All `x/supply` types and APIs have been moved to `x/bank`.
-    * [\#6409](https://github.com/cosmos/cosmos-sdk/pull/6409) Rename all IsEmpty methods to Empty across the codebase and enforce consistency.
-    * [\#6231](https://github.com/cosmos/cosmos-sdk/pull/6231) Simplify `AppModule` interface, `Route` and `NewHandler` methods become only `Route`
+    * (x/supply) [\#6010](https://github.com/onomyprotocol/cosmos-sdk/pull/6010) All `x/supply` types and APIs have been moved to `x/bank`.
+    * [\#6409](https://github.com/onomyprotocol/cosmos-sdk/pull/6409) Rename all IsEmpty methods to Empty across the codebase and enforce consistency.
+    * [\#6231](https://github.com/onomyprotocol/cosmos-sdk/pull/6231) Simplify `AppModule` interface, `Route` and `NewHandler` methods become only `Route`
       and returns a new `Route` type.
-    * (x/slashing) [\#6212](https://github.com/cosmos/cosmos-sdk/pull/6212) Remove `Get*` prefixes from key construction functions
-    * (server) [\#6079](https://github.com/cosmos/cosmos-sdk/pull/6079) Remove `UpgradeOldPrivValFile` (deprecated in Tendermint Core v0.28).
-    * [\#5719](https://github.com/cosmos/cosmos-sdk/pull/5719) Bump Go requirement to 1.14+
+    * (x/slashing) [\#6212](https://github.com/onomyprotocol/cosmos-sdk/pull/6212) Remove `Get*` prefixes from key construction functions
+    * (server) [\#6079](https://github.com/onomyprotocol/cosmos-sdk/pull/6079) Remove `UpgradeOldPrivValFile` (deprecated in Tendermint Core v0.28).
+    * [\#5719](https://github.com/onomyprotocol/cosmos-sdk/pull/5719) Bump Go requirement to 1.14+
 
 
 ### State Machine Breaking
 
 * __General__
-    * (client) [\#7268](https://github.com/cosmos/cosmos-sdk/pull/7268) / [\#7147](https://github.com/cosmos/cosmos-sdk/pull/7147) Introduce new protobuf based PubKeys, and migrate PubKey in BaseAccount to use this new protobuf based PubKey format
+    * (client) [\#7268](https://github.com/onomyprotocol/cosmos-sdk/pull/7268) / [\#7147](https://github.com/onomyprotocol/cosmos-sdk/pull/7147) Introduce new protobuf based PubKeys, and migrate PubKey in BaseAccount to use this new protobuf based PubKey format
 
 * __Modules__
-    * (modules) [\#5572](https://github.com/cosmos/cosmos-sdk/pull/5572) Separate balance from accounts per ADR 004.
+    * (modules) [\#5572](https://github.com/onomyprotocol/cosmos-sdk/pull/5572) Separate balance from accounts per ADR 004.
         * Account balances are now persisted and retrieved via the `x/bank` module.
         * Vesting account interface has been modified to account for changes.
         * Callers to `NewBaseVestingAccount` are responsible for verifying account balance in relation to
           the original vesting amount.
         * The `SendKeeper` and `ViewKeeper` interfaces in `x/bank` have been modified to account for changes.
-    * (x/auth) [\#5533](https://github.com/cosmos/cosmos-sdk/pull/5533) Migrate the `x/auth` module to use Protocol Buffers for state
+    * (x/auth) [\#5533](https://github.com/onomyprotocol/cosmos-sdk/pull/5533) Migrate the `x/auth` module to use Protocol Buffers for state
       serialization instead of Amino.
         * The `BaseAccount.PubKey` field is now represented as a Bech32 string instead of a `crypto.Pubkey`.
         * `NewBaseAccountWithAddress` now returns a reference to a `BaseAccount`.
@@ -489,10 +489,10 @@ sure you are aware of any relevant breaking changes.
           requiring a concrete codec to know how to serialize accounts.
         * The `AccountRetriever` type now accepts a `Codec` in its constructor in order to know how to
           serialize accounts.
-    * (x/bank) [\#6518](https://github.com/cosmos/cosmos-sdk/pull/6518) Support for global and per-denomination send enabled flags.
+    * (x/bank) [\#6518](https://github.com/onomyprotocol/cosmos-sdk/pull/6518) Support for global and per-denomination send enabled flags.
         * Existing send_enabled global flag has been moved into a Params structure as `default_send_enabled`.
         * An array of: `{denom: string, enabled: bool}` is added to bank Params to support per-denomination override of global default value.
-    * (x/distribution) [\#5610](https://github.com/cosmos/cosmos-sdk/pull/5610) Migrate the `x/distribution` module to use Protocol Buffers for state
+    * (x/distribution) [\#5610](https://github.com/onomyprotocol/cosmos-sdk/pull/5610) Migrate the `x/distribution` module to use Protocol Buffers for state
       serialization instead of Amino. The exact codec used is `codec.HybridCodec` which utilizes Protobuf for binary encoding and Amino
       for JSON encoding.
         * `ValidatorHistoricalRewards.ReferenceCount` is now of types `uint32` instead of `uint16`.
@@ -501,7 +501,7 @@ sure you are aware of any relevant breaking changes.
         * `ValidatorAccumulatedCommission` is now a struct with `commission`.
         * The `Keeper` constructor now takes a `codec.Marshaler` instead of a concrete Amino codec. This exact type
           provided is specified by `ModuleCdc`.
-    * (x/evidence) [\#5634](https://github.com/cosmos/cosmos-sdk/pull/5634) Migrate the `x/evidence` module to use Protocol Buffers for state
+    * (x/evidence) [\#5634](https://github.com/onomyprotocol/cosmos-sdk/pull/5634) Migrate the `x/evidence` module to use Protocol Buffers for state
       serialization instead of Amino.
         * The `internal` sub-package has been removed in order to expose the types proto file.
         * The module now accepts a `Codec` interface which extends the `codec.Marshaler` interface by
@@ -509,26 +509,26 @@ sure you are aware of any relevant breaking changes.
         * The `MsgSubmitEvidence` message has been removed in favor of `MsgSubmitEvidenceBase`. The application-level
           codec must now define the concrete `MsgSubmitEvidence` type which must implement the module's `MsgSubmitEvidence`
           interface.
-    * (x/evidence) [\#5952](https://github.com/cosmos/cosmos-sdk/pull/5952) Remove parameters from `x/evidence` genesis and module state. The `x/evidence` module now solely uses Tendermint consensus parameters to determine of evidence is valid or not.
-    * (x/gov) [\#5737](https://github.com/cosmos/cosmos-sdk/pull/5737) Migrate the `x/gov` module to use Protocol
+    * (x/evidence) [\#5952](https://github.com/onomyprotocol/cosmos-sdk/pull/5952) Remove parameters from `x/evidence` genesis and module state. The `x/evidence` module now solely uses Tendermint consensus parameters to determine of evidence is valid or not.
+    * (x/gov) [\#5737](https://github.com/onomyprotocol/cosmos-sdk/pull/5737) Migrate the `x/gov` module to use Protocol
       Buffers for state serialization instead of Amino.
         * `MsgSubmitProposal` will be removed in favor of the application-level proto-defined `MsgSubmitProposal` which
           implements the `MsgSubmitProposalI` interface. Applications should extend the `NewMsgSubmitProposalBase` type
           to define their own concrete `MsgSubmitProposal` types.
         * The module now accepts a `Codec` interface which extends the `codec.Marshaler` interface by
           requiring a concrete codec to know how to serialize `Proposal` types.
-    * (x/mint) [\#5634](https://github.com/cosmos/cosmos-sdk/pull/5634) Migrate the `x/mint` module to use Protocol Buffers for state
+    * (x/mint) [\#5634](https://github.com/onomyprotocol/cosmos-sdk/pull/5634) Migrate the `x/mint` module to use Protocol Buffers for state
       serialization instead of Amino.
         * The `internal` sub-package has been removed in order to expose the types proto file.
-    * (x/slashing) [\#5627](https://github.com/cosmos/cosmos-sdk/pull/5627) Migrate the `x/slashing` module to use Protocol Buffers for state
+    * (x/slashing) [\#5627](https://github.com/onomyprotocol/cosmos-sdk/pull/5627) Migrate the `x/slashing` module to use Protocol Buffers for state
       serialization instead of Amino. The exact codec used is `codec.HybridCodec` which utilizes Protobuf for binary encoding and Amino
       for JSON encoding.
         * The `Keeper` constructor now takes a `codec.Marshaler` instead of a concrete Amino codec. This exact type
           provided is specified by `ModuleCdc`.
-    * (x/staking) [\#6844](https://github.com/cosmos/cosmos-sdk/pull/6844) Validators are now inserted into the unbonding queue based on their unbonding time and height. The relevant keeper APIs are modified to reflect these changes by now also requiring a height.
-    * (x/staking) [\#6061](https://github.com/cosmos/cosmos-sdk/pull/6061) Allow a validator to immediately unjail when no signing info is present due to
+    * (x/staking) [\#6844](https://github.com/onomyprotocol/cosmos-sdk/pull/6844) Validators are now inserted into the unbonding queue based on their unbonding time and height. The relevant keeper APIs are modified to reflect these changes by now also requiring a height.
+    * (x/staking) [\#6061](https://github.com/onomyprotocol/cosmos-sdk/pull/6061) Allow a validator to immediately unjail when no signing info is present due to
       falling below their minimum self-delegation and never having been bonded. The validator may immediately unjail once they've met their minimum self-delegation.
-    * (x/staking) [\#5600](https://github.com/cosmos/cosmos-sdk/pull/5600) Migrate the `x/staking` module to use Protocol Buffers for state
+    * (x/staking) [\#5600](https://github.com/onomyprotocol/cosmos-sdk/pull/5600) Migrate the `x/staking` module to use Protocol Buffers for state
       serialization instead of Amino. The exact codec used is `codec.HybridCodec` which utilizes Protobuf for binary encoding and Amino
       for JSON encoding.
         * `BondStatus` is now of type `int32` instead of `byte`.
@@ -536,36 +536,36 @@ sure you are aware of any relevant breaking changes.
         * Every reference of `crypto.Pubkey` in context of a `Validator` is now of type string. `GetPubKeyFromBech32` must be used to get the `crypto.Pubkey`.
         * The `Keeper` constructor now takes a `codec.Marshaler` instead of a concrete Amino codec. This exact type
           provided is specified by `ModuleCdc`.
-    * (x/staking) [\#7979](https://github.com/cosmos/cosmos-sdk/pull/7979) keeper pubkey storage serialization migration
+    * (x/staking) [\#7979](https://github.com/onomyprotocol/cosmos-sdk/pull/7979) keeper pubkey storage serialization migration
       from bech32 to protobuf.
-    * (x/supply) [\#6010](https://github.com/cosmos/cosmos-sdk/pull/6010) Removed the `x/supply` module by merging the existing types and APIs into the `x/bank` module.
-    * (x/supply) [\#5533](https://github.com/cosmos/cosmos-sdk/pull/5533) Migrate the `x/supply` module to use Protocol Buffers for state
+    * (x/supply) [\#6010](https://github.com/onomyprotocol/cosmos-sdk/pull/6010) Removed the `x/supply` module by merging the existing types and APIs into the `x/bank` module.
+    * (x/supply) [\#5533](https://github.com/onomyprotocol/cosmos-sdk/pull/5533) Migrate the `x/supply` module to use Protocol Buffers for state
       serialization instead of Amino.
         * The `internal` sub-package has been removed in order to expose the types proto file.
         * The `x/supply` module now accepts a `Codec` interface which extends the `codec.Marshaler` interface by
           requiring a concrete codec to know how to serialize `SupplyI` types.
         * The `SupplyI` interface has been modified to no longer return `SupplyI` on methods. Instead the
           concrete type's receiver should modify the type.
-    * (x/upgrade) [\#5659](https://github.com/cosmos/cosmos-sdk/pull/5659) Migrate the `x/upgrade` module to use Protocol
+    * (x/upgrade) [\#5659](https://github.com/onomyprotocol/cosmos-sdk/pull/5659) Migrate the `x/upgrade` module to use Protocol
       Buffers for state serialization instead of Amino.
         * The `internal` sub-package has been removed in order to expose the types proto file.
         * The `x/upgrade` module now accepts a `codec.Marshaler` interface.
 
-## [v0.39.1](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.39.1) - 2020-08-11
+## [v0.39.1](https://github.com/onomyprotocol/cosmos-sdk/releases/tag/v0.39.1) - 2020-08-11
 
 ### Client Breaking
 
-* (x/auth) [\#6861](https://github.com/cosmos/cosmos-sdk/pull/6861) Remove public key Bech32 encoding for all account types for JSON serialization, instead relying on direct Amino encoding. In addition, JSON serialization utilizes Amino instead of the Go stdlib, so integers are treated as strings.
+* (x/auth) [\#6861](https://github.com/onomyprotocol/cosmos-sdk/pull/6861) Remove public key Bech32 encoding for all account types for JSON serialization, instead relying on direct Amino encoding. In addition, JSON serialization utilizes Amino instead of the Go stdlib, so integers are treated as strings.
 
-## [v0.39.0](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.39.0) - 2020-07-20
+## [v0.39.0](https://github.com/onomyprotocol/cosmos-sdk/releases/tag/v0.39.0) - 2020-07-20
 
 ### API Breaking Changes
 
-* (baseapp) [\#5837](https://github.com/cosmos/cosmos-sdk/issues/5837) Transaction simulation now returns a `SimulationResponse` which contains the `GasInfo` and `Result` from the execution.
+* (baseapp) [\#5837](https://github.com/onomyprotocol/cosmos-sdk/issues/5837) Transaction simulation now returns a `SimulationResponse` which contains the `GasInfo` and `Result` from the execution.
 
 ### Client Breaking Changes
 
-* (x/auth) [\#6745](https://github.com/cosmos/cosmos-sdk/issues/6745) Remove BaseAccount's custom JSON {,un}marshalling.
+* (x/auth) [\#6745](https://github.com/onomyprotocol/cosmos-sdk/issues/6745) Remove BaseAccount's custom JSON {,un}marshalling.
 
 ## [v0.38.5] - 2020-07-02
 
@@ -581,24 +581,24 @@ sure you are aware of any relevant breaking changes.
 
 ### State Machine Breaking
 
-* (genesis) [\#5506](https://github.com/cosmos/cosmos-sdk/pull/5506) The `x/distribution` genesis state
+* (genesis) [\#5506](https://github.com/onomyprotocol/cosmos-sdk/pull/5506) The `x/distribution` genesis state
   now includes `params` instead of individual parameters.
-* (genesis) [\#5017](https://github.com/cosmos/cosmos-sdk/pull/5017) The `x/genaccounts` module has been
+* (genesis) [\#5017](https://github.com/onomyprotocol/cosmos-sdk/pull/5017) The `x/genaccounts` module has been
   deprecated and all components removed except the `legacy/` package. This requires changes to the
   genesis state. Namely, `accounts` now exist under `app_state.auth.accounts`. The corresponding migration
   logic has been implemented for v0.38 target version. Applications can migrate via:
   `$ {appd} migrate v0.38 genesis.json`.
-* (modules) [\#5299](https://github.com/cosmos/cosmos-sdk/pull/5299) Handling of `ABCIEvidenceTypeDuplicateVote`
+* (modules) [\#5299](https://github.com/onomyprotocol/cosmos-sdk/pull/5299) Handling of `ABCIEvidenceTypeDuplicateVote`
   during `BeginBlock` along with the corresponding parameters (`MaxEvidenceAge`) have moved from the
   `x/slashing` module to the `x/evidence` module.
 
 ### API Breaking Changes
 
-* (modules) [\#5506](https://github.com/cosmos/cosmos-sdk/pull/5506) Remove individual setters of `x/distribution` parameters. Instead, follow the module spec in getting parameters, setting new value(s) and finally calling `SetParams`.
-* (types) [\#5495](https://github.com/cosmos/cosmos-sdk/pull/5495) Remove redundant `(Must)Bech32ify*` and `(Must)Get*KeyBech32` functions in favor of `(Must)Bech32ifyPubKey` and `(Must)GetPubKeyFromBech32` respectively, both of which take a `Bech32PubKeyType` (string).
-* (types) [\#5430](https://github.com/cosmos/cosmos-sdk/pull/5430) `DecCoins#Add` parameter changed from `DecCoins`
+* (modules) [\#5506](https://github.com/onomyprotocol/cosmos-sdk/pull/5506) Remove individual setters of `x/distribution` parameters. Instead, follow the module spec in getting parameters, setting new value(s) and finally calling `SetParams`.
+* (types) [\#5495](https://github.com/onomyprotocol/cosmos-sdk/pull/5495) Remove redundant `(Must)Bech32ify*` and `(Must)Get*KeyBech32` functions in favor of `(Must)Bech32ifyPubKey` and `(Must)GetPubKeyFromBech32` respectively, both of which take a `Bech32PubKeyType` (string).
+* (types) [\#5430](https://github.com/onomyprotocol/cosmos-sdk/pull/5430) `DecCoins#Add` parameter changed from `DecCoins`
   to `...DecCoin`, `Coins#Add` parameter changed from `Coins` to `...Coin`.
-* (baseapp/types) [\#5421](https://github.com/cosmos/cosmos-sdk/pull/5421) The `Error` interface (`types/errors.go`)
+* (baseapp/types) [\#5421](https://github.com/onomyprotocol/cosmos-sdk/pull/5421) The `Error` interface (`types/errors.go`)
   has been removed in favor of the concrete type defined in `types/errors/` which implements the standard `error` interface.
     * As a result, the `Handler` and `Querier` implementations now return a standard `error`.
       Within `BaseApp`, `runTx` now returns a `(GasInfo, *Result, error)` tuple and `runMsgs` returns a
@@ -610,19 +610,19 @@ sure you are aware of any relevant breaking changes.
       package contains all the relevant and pre-registered errors that you typically work with. A typical
       error returned will look like `sdkerrors.Wrap(sdkerrors.ErrUnknownRequest, "...")`. You can retrieve
       relevant ABCI information from the error via `ABCIInfo`.
-* (client) [\#5442](https://github.com/cosmos/cosmos-sdk/pull/5442) Remove client/alias.go as it's not necessary and
+* (client) [\#5442](https://github.com/onomyprotocol/cosmos-sdk/pull/5442) Remove client/alias.go as it's not necessary and
   components can be imported directly from the packages.
-* (store) [\#4748](https://github.com/cosmos/cosmos-sdk/pull/4748) The `CommitMultiStore` interface
+* (store) [\#4748](https://github.com/onomyprotocol/cosmos-sdk/pull/4748) The `CommitMultiStore` interface
   now requires a `SetInterBlockCache` method. Applications that do not wish to support this can simply
   have this method perform a no-op.
-* (modules) [\#4665](https://github.com/cosmos/cosmos-sdk/issues/4665) Refactored `x/gov` module structure and dev-UX:
+* (modules) [\#4665](https://github.com/onomyprotocol/cosmos-sdk/issues/4665) Refactored `x/gov` module structure and dev-UX:
     * Prepare for module spec integration
     * Update gov keys to use big endian encoding instead of little endian
-* (modules) [\#5017](https://github.com/cosmos/cosmos-sdk/pull/5017) The `x/genaccounts` module has been deprecated and all components removed except the `legacy/` package.
-* [\#4486](https://github.com/cosmos/cosmos-sdk/issues/4486) Vesting account types decoupled from the `x/auth` module and now live under `x/auth/vesting`. Applications wishing to use vesting account types must be sure to register types via `RegisterCodec` under the new vesting package.
-* [\#4486](https://github.com/cosmos/cosmos-sdk/issues/4486) The `NewBaseVestingAccount` constructor returns an error
+* (modules) [\#5017](https://github.com/onomyprotocol/cosmos-sdk/pull/5017) The `x/genaccounts` module has been deprecated and all components removed except the `legacy/` package.
+* [\#4486](https://github.com/onomyprotocol/cosmos-sdk/issues/4486) Vesting account types decoupled from the `x/auth` module and now live under `x/auth/vesting`. Applications wishing to use vesting account types must be sure to register types via `RegisterCodec` under the new vesting package.
+* [\#4486](https://github.com/onomyprotocol/cosmos-sdk/issues/4486) The `NewBaseVestingAccount` constructor returns an error
   if the provided arguments are invalid.
-* (x/auth) [\#5006](https://github.com/cosmos/cosmos-sdk/pull/5006) Modular `AnteHandler` via composable decorators:
+* (x/auth) [\#5006](https://github.com/onomyprotocol/cosmos-sdk/pull/5006) Modular `AnteHandler` via composable decorators:
     * The `AnteHandler` interface now returns `(newCtx Context, err error)` instead of `(newCtx Context, result sdk.Result, abort bool)`
     * The `NewAnteHandler` function returns an `AnteHandler` function that returns the new `AnteHandler`
       interface and has been moved into the `auth/ante` directory.
@@ -633,12 +633,12 @@ sure you are aware of any relevant breaking changes.
     * `StdTx#GetSignatures` will return an array of just signature byte slices `[][]byte` instead of
       returning an array of `StdSignature` structs. To replicate the old behavior, use the public field
       `StdTx.Signatures` to get back the array of StdSignatures `[]StdSignature`.
-* (modules) [\#5299](https://github.com/cosmos/cosmos-sdk/pull/5299) `HandleDoubleSign` along with params `MaxEvidenceAge` and `DoubleSignJailEndTime` have moved from the `x/slashing` module to the `x/evidence` module.
-* (keys) [\#4941](https://github.com/cosmos/cosmos-sdk/issues/4941) Keybase concrete types constructors such as `NewKeyBaseFromDir` and `NewInMemory` now accept optional parameters of type `KeybaseOption`. These
+* (modules) [\#5299](https://github.com/onomyprotocol/cosmos-sdk/pull/5299) `HandleDoubleSign` along with params `MaxEvidenceAge` and `DoubleSignJailEndTime` have moved from the `x/slashing` module to the `x/evidence` module.
+* (keys) [\#4941](https://github.com/onomyprotocol/cosmos-sdk/issues/4941) Keybase concrete types constructors such as `NewKeyBaseFromDir` and `NewInMemory` now accept optional parameters of type `KeybaseOption`. These
   optional parameters are also added on the keys sub-commands functions, which are now public, and allows
   these options to be set on the commands or ignored to default to previous behavior.
-* [\#5547](https://github.com/cosmos/cosmos-sdk/pull/5547) `NewKeyBaseFromHomeFlag` constructor has been removed.
-* [\#5439](https://github.com/cosmos/cosmos-sdk/pull/5439) Further modularization was done to the `keybase`
+* [\#5547](https://github.com/onomyprotocol/cosmos-sdk/pull/5547) `NewKeyBaseFromHomeFlag` constructor has been removed.
+* [\#5439](https://github.com/onomyprotocol/cosmos-sdk/pull/5439) Further modularization was done to the `keybase`
   package to make it more suitable for use with different key formats and algorithms:
     * The `WithKeygenFunc` function added as a `KeybaseOption` which allows a custom bytes to key
       implementation to be defined when keys are created.
@@ -648,18 +648,18 @@ sure you are aware of any relevant breaking changes.
       the `client/keys` add command.
     * `SupportedAlgos` and `SupportedAlgosLedger` functions return a slice of `SigningAlgo`s that are
       supported by the keybase and the ledger integration respectively.
-* (simapp) [\#5419](https://github.com/cosmos/cosmos-sdk/pull/5419) The `helpers.GenTx()` now accepts a gas argument.
-* (baseapp) [\#5455](https://github.com/cosmos/cosmos-sdk/issues/5455) A `sdk.Context` is now passed into the `router.Route()` function.
+* (simapp) [\#5419](https://github.com/onomyprotocol/cosmos-sdk/pull/5419) The `helpers.GenTx()` now accepts a gas argument.
+* (baseapp) [\#5455](https://github.com/onomyprotocol/cosmos-sdk/issues/5455) A `sdk.Context` is now passed into the `router.Route()` function.
 
 ### Client Breaking Changes
 
-* (rest) [\#5270](https://github.com/cosmos/cosmos-sdk/issues/5270) All account types now implement custom JSON serialization.
-* (rest) [\#4783](https://github.com/cosmos/cosmos-sdk/issues/4783) The balance field in the DelegationResponse type is now sdk.Coin instead of sdk.Int
-* (x/auth) [\#5006](https://github.com/cosmos/cosmos-sdk/pull/5006) The gas required to pass the `AnteHandler` has
+* (rest) [\#5270](https://github.com/onomyprotocol/cosmos-sdk/issues/5270) All account types now implement custom JSON serialization.
+* (rest) [\#4783](https://github.com/onomyprotocol/cosmos-sdk/issues/4783) The balance field in the DelegationResponse type is now sdk.Coin instead of sdk.Int
+* (x/auth) [\#5006](https://github.com/onomyprotocol/cosmos-sdk/pull/5006) The gas required to pass the `AnteHandler` has
   increased significantly due to modular `AnteHandler` support. Increase GasLimit accordingly.
-* (rest) [\#5336](https://github.com/cosmos/cosmos-sdk/issues/5336) `MsgEditValidator` uses `description` instead of `Description` as a JSON key.
-* (keys) [\#5097](https://github.com/cosmos/cosmos-sdk/pull/5097) Due to the keybase -> keyring transition, keys need to be migrated. See `keys migrate` command for more info.
-* (x/auth) [\#5424](https://github.com/cosmos/cosmos-sdk/issues/5424) Drop `decode-tx` command from x/auth/client/cli, duplicate of the `decode` command.
+* (rest) [\#5336](https://github.com/onomyprotocol/cosmos-sdk/issues/5336) `MsgEditValidator` uses `description` instead of `Description` as a JSON key.
+* (keys) [\#5097](https://github.com/onomyprotocol/cosmos-sdk/pull/5097) Due to the keybase -> keyring transition, keys need to be migrated. See `keys migrate` command for more info.
+* (x/auth) [\#5424](https://github.com/onomyprotocol/cosmos-sdk/issues/5424) Drop `decode-tx` command from x/auth/client/cli, duplicate of the `decode` command.
 
 ## [v0.37.14] - 2020-08-12
 

@@ -80,7 +80,7 @@ go: go version go1.12.5 darwin/amd64
 코스모스 SDK 또는 텐더민트의 변경 사항을 테스팅하기 위해서는 `replace` 항목이 `go.mod`에 추가하여 올바른 import path를 제공해야합니다.
 
 - 변경 사항 적용
-- `go.mod`에 `replace github.com/cosmos/cosmos-sdk => /path/to/clone/cosmos-sdk` 추가
+- `go.mod`에 `replace github.com/onomyprotocol/cosmos-sdk => /path/to/clone/cosmos-sdk` 추가
 - `make clean install` 또는 `make clean build` 실행
 - 변경 사항 테스트
 

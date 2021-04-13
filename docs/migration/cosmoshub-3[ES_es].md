@@ -18,9 +18,9 @@ Estos capítulos contienen todas las guías de migración para actualizar tu apl
 
 Si tienes un explorador de bloques, un monedero, un exchange, un validador o cualquier otro servicio (por ejemplo, un proveedor de custodia) que dependa del Onomy o del ecosistema Cosmos, deberás prestar atención, porque esta actualización implicará cambios sustanciales.
 
-1. [Migración de aplicaciones y módulos](ttps://github.com/cosmos/cosmos-sdk/blob/master/docs/migrations/app_and_modules.md)
-1. [Guía de actualización de la cadena a v0.41](https://github.com/cosmos/cosmos-sdk/blob/master/docs/migrations/chain-upgrade-guide-040.md)
-1. [Migración de endpoints REST](https://github.com/cosmos/cosmos-sdk/blob/master/docs/migrations/rest.md)
+1. [Migración de aplicaciones y módulos](ttps://github.com/onomyprotocol/cosmos-sdk/blob/master/docs/migrations/app_and_modules.md)
+1. [Guía de actualización de la cadena a v0.41](https://github.com/onomyprotocol/cosmos-sdk/blob/master/docs/migrations/chain-upgrade-guide-040.md)
+1. [Migración de endpoints REST](https://github.com/onomyprotocol/cosmos-sdk/blob/master/docs/migrations/rest.md)
 1. [Recopilación de modificaciones de ruptura de los registros de cambios](https://github.com/cosmos/ochain/blob/main/docs/migration/breaking_changes.md)
 1. [Comunicación entre cadenas de bloques (IBC) - transacciones entre cadenas](https://figment.io/resources/cosmos-stargate-upgrade-overview/#ibc)
 1. [Migración de Protobuf - rendimiento de la cadena de bloques y aceleración del desarrollo](https://figment.network/resources/cosmos-stargate-upgrade-overview/#proto)
@@ -44,7 +44,7 @@ Hay muchas características y cambios notables en la próxima versión del SDK. 
 
 Algunos de los principales cambios que hay que tener en cuenta a la hora de actualizar como desarrollador o cliente son los siguientes:
 
-- **Protocol Buffers**: Inicialmente el SDK de Cosmos utilizaba _codecs_ de Amino para casi toda la codificación y decodificación. En esta versión se ha integrado una importante actualización de los Protocol Buffers. Se espera que con los Protocol Buffers las aplicaciones ganen en velocidad, legibilidad, conveniencia e interoperabilidad con muchos lenguajes de programación. Para más información consulta [aquí](https://github.com/cosmos/cosmos-sdk/blob/master/docs/migrations/app_and_modules.md#protocol-buffers).
+- **Protocol Buffers**: Inicialmente el SDK de Cosmos utilizaba _codecs_ de Amino para casi toda la codificación y decodificación. En esta versión se ha integrado una importante actualización de los Protocol Buffers. Se espera que con los Protocol Buffers las aplicaciones ganen en velocidad, legibilidad, conveniencia e interoperabilidad con muchos lenguajes de programación. Para más información consulta [aquí](https://github.com/onomyprotocol/cosmos-sdk/blob/master/docs/migrations/app_and_modules.md#protocol-buffers).
 - **CLI**: El CLI y el commando de full node para la cadena de bloques estaban separados en las versiones anteriores del SDK de Cosmos. Esto dio lugar a dos binarios, `ochaind` y `gaiacli`, que estaban separados y podían utilizarse para diferentes interacciones con la cadena de bloques. Ambos se han fusionado en un solo comando `ochaind` que ahora soporta los comandos que antes soportaba el `gaiacli`.
 - **Configuración del nodo**: Anteriormente los datos de la cadena de bloques y la configuración de los nodos se almacenaban en `~/.ochain/`, ahora residirán en `~/.ochain/`, si utilizas scripts que hacen uso de la configuración o de los datos de la cadena de bloques, asegúrate de actualizar la ruta.
 

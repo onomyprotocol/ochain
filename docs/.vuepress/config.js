@@ -21,7 +21,7 @@ module.exports = {
             },
             {
               title: "SDK API Reference",
-              path: "https://godoc.org/github.com/cosmos/cosmos-sdk"
+              path: "https://godoc.org/github.com/onomyprotocol/cosmos-sdk"
             },
             {
               title: "REST API Spec",
