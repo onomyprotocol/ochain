@@ -3,8 +3,8 @@ package ochain
 import (
 	"fmt"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
+	sdk "github.com/onomyprotocol/cosmos-sdk/types"
+	sdkerrors "github.com/onomyprotocol/cosmos-sdk/types/errors"
 	"github.com/onomyprotocol/ochain/x/ochain/keeper"
 	"github.com/onomyprotocol/ochain/x/ochain/types"
 )

@@ -164,7 +164,7 @@ Lunie에 대해 더 알고싶으시면 이 [투토리얼](https://medium.com/eas
 
 # 코스모스 표준 트랜잭션
 
-코스모스의 트랜잭션은 코스모스 SDK의[표준 트랜잭션 타입(Standard Transaction Type)](https://godoc.org/github.com/cosmos/cosmos-sdk/x/auth#StdTx)를 응용합니다. 렛저 기기는 이 오브젝트의 시리얼화된 JSON을 기기에서 표기하며, 트랜잭션 서명 전 검토하실 수 있습니다. 각 필드에 대한 설명은 다음과 같습니다:
+코스모스의 트랜잭션은 코스모스 SDK의[표준 트랜잭션 타입(Standard Transaction Type)](https://godoc.org/github.com/onomyprotocol/cosmos-sdk/x/auth#StdTx)를 응용합니다. 렛저 기기는 이 오브젝트의 시리얼화된 JSON을 기기에서 표기하며, 트랜잭션 서명 전 검토하실 수 있습니다. 각 필드에 대한 설명은 다음과 같습니다:
 
 - `chain-id`: 트랜잭션을 전송할 체인, (예, `ochain-13003` 테스트넷 또는 `cosmoshub-2` 메인넷)
 - `account_number`: 계정에 최초로 자금을 입금할때 생성되는 계정의 고유 글로벌 ID

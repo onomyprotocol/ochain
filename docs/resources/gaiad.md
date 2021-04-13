@@ -321,11 +321,11 @@ The action tag always equals the message type returned by the `Type()` function 
 
 You can find a list of available `events` on each of the SDK modules:
 
-- [Staking events](https://github.com/cosmos/cosmos-sdk/blob/master/x/staking/spec/07_events.md)
-- [Governance events](https://github.com/cosmos/cosmos-sdk/blob/master/x/gov/spec/04_events.md)
-- [Slashing events](https://github.com/cosmos/cosmos-sdk/blob/master/x/slashing/spec/06_events.md)
-- [Distribution events](https://github.com/cosmos/cosmos-sdk/blob/master/x/distribution/spec/06_events.md)
-- [Bank events](https://github.com/cosmos/cosmos-sdk/blob/master/x/bank/spec/04_events.md)
+- [Staking events](https://github.com/onomyprotocol/cosmos-sdk/blob/master/x/staking/spec/07_events.md)
+- [Governance events](https://github.com/onomyprotocol/cosmos-sdk/blob/master/x/gov/spec/04_events.md)
+- [Slashing events](https://github.com/onomyprotocol/cosmos-sdk/blob/master/x/slashing/spec/06_events.md)
+- [Distribution events](https://github.com/onomyprotocol/cosmos-sdk/blob/master/x/distribution/spec/06_events.md)
+- [Bank events](https://github.com/onomyprotocol/cosmos-sdk/blob/master/x/bank/spec/04_events.md)
 :::
 
 #### Matching a Transaction's Hash
@@ -574,7 +574,7 @@ Some considerations about the voting process:
   - `((YesVotes+NoVotes+NoWithVetoVotes) / totalBondedStake) >= quorum`
 
 For more information about the governance process and how it works, please check
-out the Governance module [specification](https://github.com/cosmos/cosmos-sdk/tree/master/x/gov/spec).
+out the Governance module [specification](https://github.com/onomyprotocol/cosmos-sdk/tree/master/x/gov/spec).
 
 #### Create a Governance Proposal
 

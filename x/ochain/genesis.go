@@ -1,7 +1,7 @@
 package ochain
 
 import (
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/onomyprotocol/cosmos-sdk/types"
 	"github.com/onomyprotocol/ochain/x/ochain/keeper"
 	"github.com/onomyprotocol/ochain/x/ochain/types"
 )

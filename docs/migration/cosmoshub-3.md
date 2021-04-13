@@ -49,9 +49,9 @@ These chapters contains all the migration guides to update your app and modules 
 
 If you’re running a block explorer, wallet, exchange, validator, or any other service (eg. custody provider) that depends upon the Onomy or Cosmos ecosystem, you’ll want to pay attention, because this upgrade will involve substantial changes.
 
-1. [App and Modules Migration](https://github.com/cosmos/cosmos-sdk/blob/master/docs/migrations/app_and_modules.md)
-1. [Chain Upgrade Guide to v0.40](https://github.com/cosmos/cosmos-sdk/blob/master/docs/migrations/chain-upgrade-guide-040.md)
-1. [REST Endpoints Migration](https://github.com/cosmos/cosmos-sdk/blob/master/docs/migrations/rest.md)
+1. [App and Modules Migration](https://github.com/onomyprotocol/cosmos-sdk/blob/master/docs/migrations/app_and_modules.md)
+1. [Chain Upgrade Guide to v0.40](https://github.com/onomyprotocol/cosmos-sdk/blob/master/docs/migrations/chain-upgrade-guide-040.md)
+1. [REST Endpoints Migration](https://github.com/onomyprotocol/cosmos-sdk/blob/master/docs/migrations/rest.md)
 1. [Collection of breaking changes from changelogs](breaking_changes.md)
 1. [Inter-Blockchain Communication (IBC)– cross-chain transactions](https://figment.network/resources/cosmos-stargate-upgrade-overview/#ibc)
 1. [Protobuf Migration – blockchain performance & dev acceleration](https://figment.network/resources/cosmos-stargate-upgrade-overview/#proto)
@@ -92,7 +92,7 @@ Some of the biggest changes to take note on when upgrading as a developer or cli
 - **Protocol Buffers**: Initially the Cosmos SDK used Amino codecs for nearly all encoding and decoding. 
 In this version a major upgrade to Protocol Buffers have been integrated. It is expected that with Protocol Buffers
 applications gain in speed, readability, convinience and interoperability with many programming languages.
-[Read more](https://github.com/cosmos/cosmos-sdk/blob/master/docs/migrations/app_and_modules.md#protocol-buffers)
+[Read more](https://github.com/onomyprotocol/cosmos-sdk/blob/master/docs/migrations/app_and_modules.md#protocol-buffers)
 - **CLI**: The CLI and the daemon for a blockchain were seperated in previous versions of the Cosmos SDK. This 
 led to a `ochaind` and `gaiacli` binary which were seperated and could be used for different interactions with the
 blockchain. Both of these have been merged into one `ochaind` which now supports the commands the `gaiacli` previously

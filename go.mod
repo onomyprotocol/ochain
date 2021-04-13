@@ -5,7 +5,7 @@ go 1.15
 require (
 	github.com/BurntSushi/toml v0.3.1
 	github.com/MakeNowJust/heredoc/v2 v2.0.2-0.20200911102834-82b7f958b059
-	github.com/cosmos/cosmos-sdk v0.42.1
+	github.com/onomyprotocol/cosmos-sdk v0.42.1
 	github.com/cosmos/go-bip39 v1.0.0
 	github.com/gogo/protobuf v1.3.3
 	github.com/google/go-cmp v0.5.4 // indirect

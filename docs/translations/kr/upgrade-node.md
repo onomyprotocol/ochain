@@ -59,7 +59,7 @@ cp -f genesis.json new_genesis.json
 mv new_genesis.json genesis.json
 ```
 
-이 상태에서 내보낸 제네시스 파일을 새로운 버전과 호환되는 제네시스 파일로 변환하는 스크립트를 실행하셔야될 수 있습니다. 예를 들어, `Account` 타입의 형태가 바뀐경우, 스크립트는 account store에서 인코딩된 계정을 확인하고, 언마셜하고, 타입을 업데이트한 후 다시 마셜링을 진행한 다음에 복구하는 작업을 진행합니다. 스크립트의 예시는 [여기](https://github.com/cosmos/cosmos-sdk/blob/master/contrib/export/v0.33.x-to-v0.34.0.py).를 참고하세요
+이 상태에서 내보낸 제네시스 파일을 새로운 버전과 호환되는 제네시스 파일로 변환하는 스크립트를 실행하셔야될 수 있습니다. 예를 들어, `Account` 타입의 형태가 바뀐경우, 스크립트는 account store에서 인코딩된 계정을 확인하고, 언마셜하고, 타입을 업데이트한 후 다시 마셜링을 진행한 다음에 복구하는 작업을 진행합니다. 스크립트의 예시는 [여기](https://github.com/onomyprotocol/cosmos-sdk/blob/master/contrib/export/v0.33.x-to-v0.34.0.py).를 참고하세요
 
 ## 데이터 리셋하기
 
