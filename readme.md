@@ -37,7 +37,7 @@ starport network chain create [chainID] [sourceURL]
 `chainID` is a string that uniquely identifies your blockchain on SPN. `sourceURL` is a URL that can be used to clone the repository containing a Cosmos SDK blockchain node (for example, `https://github.com/tendermint/spn`). By running the `create` command you act as a "coordinator" and initiate the launch of a blockchain.
 
 To start an Onomy chain the following command may be used
-```
+
 ```
 starport network chain create <your_chain_name> http://github.com/onomyprotocol/ochain
 ```
