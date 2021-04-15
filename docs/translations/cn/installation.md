@@ -25,7 +25,7 @@ Cosmos SDK 需要安装**Go 1.12+**
 :::
 
 ```bash
-git clone -b <latest-release-tag> https://github.com/cosmos/ochain
+git clone -b <latest-release-tag> https://github.com/onomyprotocol/ochain
 cd ochain && make install
 ```
 

@@ -17,7 +17,7 @@ All the following instructions have been tested on *Ubuntu 18.04.2 LTS* with *do
 Clone `ochain`:
 
 ```
-git clone https://github.com/cosmos/ochain.git
+git clone https://github.com/onomyprotocol/ochain.git
 ```
 
 Checkout the commit, branch, or release tag you want to build:

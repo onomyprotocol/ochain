@@ -51,7 +51,7 @@ Make sure that every node has a unique `priv_validator.json`. Do not copy the `p
 Now it is time to upgrade the software:
 
 ```bash
-git clone https://github.com/cosmos/ochain.git
+git clone https://github.com/onomyprotocol/ochain.git
 cd ochain
 git fetch --all && git checkout master
 make install
@@ -62,6 +62,6 @@ _NOTE_: If you have issues at this step, please check that you have the latest s
 :::
 
 Note we use `master` here since it contains the latest stable release.
-See the [testnet repo](https://github.com/cosmos/testnets) for details on which version is needed for which testnet, and the [Ochain release page](https://github.com/cosmos/ochain/releases) for details on each release.
+See the [testnet repo](https://github.com/cosmos/testnets) for details on which version is needed for which testnet, and the [Ochain release page](https://github.com/onomyprotocol/ochain/releases) for details on each release.
 
 Your full node has been cleanly upgraded!

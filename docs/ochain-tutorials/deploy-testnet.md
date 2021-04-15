@@ -10,7 +10,7 @@ This document describes 3 ways to setup a network of `ochaind` nodes, each servi
 2. Multi-node, local, automated testnet
 3. Multi-node, remote, automated testnet
 
-Supporting code can be found in the [networks directory](https://github.com/cosmos/ochain/tree/main/networks) and additionally the `local` or `remote` sub-directories.
+Supporting code can be found in the [networks directory](https://github.com/onomyprotocol/ochain/tree/main/networks) and additionally the `local` or `remote` sub-directories.
 
 > NOTE: The `remote` network bootstrapping may be out of sync with the latest releases and is not to be relied upon.
 
@@ -65,7 +65,7 @@ This setup puts all the data for `ochaind` in `~/.ochain`. You can examine the g
 
 ## Multi-node, Local, Automated Testnet
 
-From the [networks/local directory](https://github.com/cosmos/ochain/tree/main/networks/local):
+From the [networks/local directory](https://github.com/onomyprotocol/ochain/tree/main/networks/local):
 
 ### Requirements
 
@@ -79,7 +79,7 @@ Build the `ochaind` binary (linux) and the `tendermint/gaiadnode` docker image r
 
 ```bash
 # Clone the ochain repo
-git clone https://github.com/cosmos/ochain.git
+git clone https://github.com/onomyprotocol/ochain.git
 
 # Work from the SDK repo
 cd ochain
@@ -192,7 +192,7 @@ BINARY=gaiafoo make localnet-start
 
 ## Multi-Node, Remote, Automated Testnet
 
-The following should be run from the [networks directory](https://github.com/cosmos/ochain/tree/main/networks).
+The following should be run from the [networks directory](https://github.com/onomyprotocol/ochain/tree/main/networks).
 
 ### Terraform & Ansible
 

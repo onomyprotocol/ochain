@@ -5,7 +5,7 @@ parent:
 
 # Updating the docs
 
-If you want to open a PR on Ochain to update the documentation, please follow the guidelines in the [`CONTRIBUTING.md`](https://github.com/cosmos/ochain/tree/main/CONTRIBUTING.md)
+If you want to open a PR on Ochain to update the documentation, please follow the guidelines in the [`CONTRIBUTING.md`](https://github.com/onomyprotocol/ochain/tree/main/CONTRIBUTING.md)
 
 ## Docs Build Workflow
 
@@ -13,7 +13,7 @@ The documentation for Ochain is hosted at:
 
 - https://hub.cosmos.network/
 
-built from the files in this (`/docs`) directory for [master](https://github.com/cosmos/ochain/tree/main/docs)
+built from the files in this (`/docs`) directory for [master](https://github.com/onomyprotocol/ochain/tree/main/docs)
 
 ### How It Works
 

@@ -30,7 +30,7 @@
 1. [강력한 기능을 포함한 라이트 클라이언트](https://figment.network/resources/cosmos-stargate-upgrade-overview/#light)
 1. [체인 업그레이드 모듈 – 업그레이드 자동화](https://figment.network/resources/cosmos-stargate-upgrade-overview/#upgrade)
 
-만약 2월 18일 전에 업그레이드 과정을 미리 테스트 진행을 희망하시는 경우 [이 글](https://github.com/cosmos/ochain/issues/569#issuecomment-767910963)을 참고하세요
+만약 2월 18일 전에 업그레이드 과정을 미리 테스트 진행을 희망하시는 경우 [이 글](https://github.com/onomyprotocol/ochain/issues/569#issuecomment-767910963)을 참고하세요
 
 ## 사전 정보
 
@@ -39,7 +39,7 @@
 
 우선, [인터체인 표준](https://github.com/cosmos/ics#ibc-quick-references)를 따른 [IBC](https://docs.cosmos.network/master/ibc/overview.html)이 활성화될 예정입니다. 또한 효율성, 노드 동기화, 추후 블록체인 업데이트 과정이 개선됩니다. 자세한 내용은 [스타게이트 웹사이트](https://stargate.cosmos.network/)를 참고하세요.
 
-__이번 업그레이드에서 풀 노드 운영자 업그레이드를 진행하는 것은 [Ochain](https://github.com/cosmos/ochain) 애플리케이션 v4.0.0입니다. 이번 버전의 Ochain 애플리케이션은 코스모스 SDK v0.41.0 그리고 텐더민트 v0.34.3 기반으로 빌드되었습니다.
+__이번 업그레이드에서 풀 노드 운영자 업그레이드를 진행하는 것은 [Ochain](https://github.com/onomyprotocol/ochain) 애플리케이션 v4.0.0입니다. 이번 버전의 Ochain 애플리케이션은 코스모스 SDK v0.41.0 그리고 텐더민트 v0.34.3 기반으로 빌드되었습니다.
 
 ## 주요 업데이트
 
@@ -130,12 +130,12 @@ Ochain v2.0.15의 버전/커밋 해시값: `89cf7e6fc166eaabf47ad2755c443d455fed
    [SHA256_VALUE]  cosmoshub_3_genesis_export.json
    ```
 
-1. 이 단계 까지 오셨다면 올바른 제네시스 상태를 내보내셨습니다! 이후 과정부터는 [Ochain](https://github.com/cosmos/ochain) v4.0.0을 필요로 합니다. 그룹 채팅 방의 다른 검증인들/피어와 새로운 제네시스 파일의 해시를 비교/검증하세요.
+1. 이 단계 까지 오셨다면 올바른 제네시스 상태를 내보내셨습니다! 이후 과정부터는 [Ochain](https://github.com/onomyprotocol/ochain) v4.0.0을 필요로 합니다. 그룹 채팅 방의 다른 검증인들/피어와 새로운 제네시스 파일의 해시를 비교/검증하세요.
 
    **참고**: Go [1.15+](https://golang.org/dl/) 버전이 설치되어야 합니다!
 
    ```bash
-   $ git clone https://github.com/cosmos/ochain.git && cd ochain && git checkout v4.0.0; make install
+   $ git clone https://github.com/onomyprotocol/ochain.git && cd ochain && git checkout v4.0.0; make install
    ```
 
 1. _Gaia_의 올바른 버전(v4.0.0)을 운영하고 있는 것을 확인하세요:

@@ -10,7 +10,7 @@ order: 3
 **Instant Gratification Snippet**
 
 ```bash
-git clone -b v4.2.0 https://github.com/cosmos/ochain
+git clone -b v4.2.0 https://github.com/onomyprotocol/ochain
 cd ochain
 make install
 ochaind init chooseanicehandle

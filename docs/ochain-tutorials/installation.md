@@ -27,17 +27,17 @@ source ~/.bash_profile
 ## Install the binaries
 
 Next, let's install the latest version of Ochain. Make sure you `git checkout` the
-correct [released version](https://github.com/cosmos/ochain/releases).
+correct [released version](https://github.com/onomyprotocol/ochain/releases).
 
 ```bash
-git clone -b <latest-release-tag> https://github.com/cosmos/ochain
+git clone -b <latest-release-tag> https://github.com/onomyprotocol/ochain
 cd ochain && make install
 ```
 
 If this command fails due to the following error message, you might have already set `LDFLAGS` prior to running this step.
 
 ```
-# github.com/cosmos/ochain/cmd/ochaind
+# github.com/onomyprotocol/ochain/cmd/ochaind
 flag provided but not defined: -L
 usage: link [options] main.o
 ...

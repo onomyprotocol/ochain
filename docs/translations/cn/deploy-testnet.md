@@ -75,7 +75,7 @@ ochaind start
 
 ```bash
 # Clone the ochain repo
-git clone https://github.com/cosmos/ochain.git
+git clone https://github.com/onomyprotocol/ochain.git
 
 # Work from the SDK repo
 cd onomy-sdk

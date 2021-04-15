@@ -3,7 +3,7 @@ module.exports = {
   title: "Onomy",
   base: process.env.VUEPRESS_BASE || "/",
   themeConfig: {
-    docsRepo: "cosmos/ochain",
+    docsRepo: "onomyprotocol/ochain",
     docsDir: "docs",
     editLinks: true,
     label: "hub",
@@ -58,7 +58,7 @@ module.exports = {
         },
         {
           service: "github",
-          url: "https://github.com/cosmos/ochain"
+          url: "https://github.com/onomyprotocol/ochain"
         },
         {
           service: "reddit",
@@ -112,11 +112,11 @@ module.exports = {
             {
               title: "Contributing to the docs",
               url:
-                "https://github.com/cosmos/ochain/blob/main/docs/DOCS_README.md"
+                "https://github.com/onomyprotocol/ochain/blob/main/docs/DOCS_README.md"
             },
             {
               title: "Source code on GitHub",
-              url: "https://github.com/cosmos/ochain/"
+              url: "https://github.com/onomyprotocol/ochain/"
             }
           ]
         }
