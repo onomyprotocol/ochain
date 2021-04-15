@@ -471,8 +471,8 @@ github.com/oklog/ulid v1.3.1/go.mod h1:CirwcVhetQ6Lv90oh/F+FBtV6XMibvdAFo93nm5qn
 github.com/olekukonko/tablewriter v0.0.0-20170122224234-a0225b3f23b5/go.mod h1:vsDQFd/mU46D+Z4whnwzcISnGGzXWMclvtLoiIKAKIo=
 github.com/olekukonko/tablewriter v0.0.1/go.mod h1:vsDQFd/mU46D+Z4whnwzcISnGGzXWMclvtLoiIKAKIo=
 github.com/olekukonko/tablewriter v0.0.2-0.20190409134802-7e037d187b0c/go.mod h1:vsDQFd/mU46D+Z4whnwzcISnGGzXWMclvtLoiIKAKIo=
-github.com/onomyprotocol/cosmos-sdk v0.42.31 h1:zXwiUTOYsxM/gmrCTV69/iU9RsF5iqSMfe3qsGyipUQ=
-github.com/onomyprotocol/cosmos-sdk v0.42.31/go.mod h1:b/6hIUPtg6j7IzrrgFhTJnFwOg9/MOHiya3qDd59NqE=
+github.com/onomyprotocol/onomy-sdk v0.42.31 h1:zXwiUTOYsxM/gmrCTV69/iU9RsF5iqSMfe3qsGyipUQ=
+github.com/onomyprotocol/onomy-sdk v0.42.31/go.mod h1:b/6hIUPtg6j7IzrrgFhTJnFwOg9/MOHiya3qDd59NqE=
 github.com/onsi/ginkgo v1.6.0/go.mod h1:lLunBs/Ym6LB5Z9jYTR76FiuTmxDTDusOGeTQH+WWjE=
 github.com/onsi/ginkgo v1.7.0/go.mod h1:lLunBs/Ym6LB5Z9jYTR76FiuTmxDTDusOGeTQH+WWjE=
 github.com/onsi/ginkgo v1.12.1/go.mod h1:zj2OWP4+oCPe1qIXoGWkgMRwljMUYCdkwsT2108oapk=

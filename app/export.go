@@ -6,11 +6,11 @@ import (
 
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
-	servertypes "github.com/onomyprotocol/cosmos-sdk/server/types"
-	sdk "github.com/onomyprotocol/cosmos-sdk/types"
-	slashingtypes "github.com/onomyprotocol/cosmos-sdk/x/slashing/types"
-	"github.com/onomyprotocol/cosmos-sdk/x/staking"
-	stakingtypes "github.com/onomyprotocol/cosmos-sdk/x/staking/types"
+	servertypes "github.com/onomyprotocol/onomy-sdk/server/types"
+	sdk "github.com/onomyprotocol/onomy-sdk/types"
+	slashingtypes "github.com/onomyprotocol/onomy-sdk/x/slashing/types"
+	"github.com/onomyprotocol/onomy-sdk/x/staking"
+	stakingtypes "github.com/onomyprotocol/onomy-sdk/x/staking/types"
 )
 
 // ExportAppStateAndValidators exports the state of the application for a genesis

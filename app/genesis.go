@@ -3,7 +3,7 @@ package app
 import (
 	"encoding/json"
 
-	"github.com/onomyprotocol/cosmos-sdk/codec"
+	"github.com/onomyprotocol/onomy-sdk/codec"
 )
 
 // The genesis state of the blockchain is represented here as a map of raw json

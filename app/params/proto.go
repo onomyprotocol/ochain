@@ -1,9 +1,9 @@
 package params
 
 import (
-	"github.com/onomyprotocol/cosmos-sdk/codec"
-	"github.com/onomyprotocol/cosmos-sdk/codec/types"
-	"github.com/onomyprotocol/cosmos-sdk/x/auth/tx"
+	"github.com/onomyprotocol/onomy-sdk/codec"
+	"github.com/onomyprotocol/onomy-sdk/codec/types"
+	"github.com/onomyprotocol/onomy-sdk/x/auth/tx"
 )
 
 // MakeEncodingConfig creates an EncodingConfig for an amino based test configuration.

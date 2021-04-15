@@ -44,8 +44,8 @@ ochaind unsafe-reset-all
 现在升级软件：
 
 ```bash
-git clone https://github.com/onomyprotocol/cosmos-sdk.git
-cd cosmos-sdk
+git clone https://github.com/onomyprotocol/onomy-sdk.git
+cd onomy-sdk
 git fetch --all && git checkout master
 make install
 ```
@@ -54,6 +54,6 @@ make install
 _注意_：如果在这一步出现问题，请检查是否安装了最新稳定版本的 Go。
 :::
 
-注意这里我们使用的是包含最新稳定发布版本的`master`分支。请查看[testnet repo](https://github.com/cosmos/testnets)查看哪个版本的测试网需要哪一个 Cosmos-SDK 版本，在[SDK 发布版](https://github.com/onomyprotocol/cosmos-sdk/releases)中对应的详细信息。
+注意这里我们使用的是包含最新稳定发布版本的`master`分支。请查看[testnet repo](https://github.com/cosmos/testnets)查看哪个版本的测试网需要哪一个 Cosmos-SDK 版本，在[SDK 发布版](https://github.com/onomyprotocol/onomy-sdk/releases)中对应的详细信息。
 
 你的全节点已经升级成功！

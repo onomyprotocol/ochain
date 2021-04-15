@@ -26,7 +26,7 @@ If you'd like to save those seeds to your settings put them in ~/.ochain/config/
 
 **You need to [install ochain](./installation.md) before you go further**
 
-**Ochain nodes on cosmoshub-4 take about 45 min to startup. The development team are evaluating [solutions](https://github.com/onomyprotocol/cosmos-sdk/issues/7766).**
+**Ochain nodes on cosmoshub-4 take about 45 min to startup. The development team are evaluating [solutions](https://github.com/onomyprotocol/onomy-sdk/issues/7766).**
 
 ## Setting Up a New Node
 

@@ -24,7 +24,7 @@ ifeq ($(LEDGER_ENABLED),true)
   else
     UNAME_S = $(shell uname -s)
     ifeq ($(UNAME_S),OpenBSD)
-      $(warning OpenBSD detected, disabling ledger support (https://github.com/onomyprotocol/cosmos-sdk/issues/1988))
+      $(warning OpenBSD detected, disabling ledger support (https://github.com/onomyprotocol/onomy-sdk/issues/1988))
     else
       GCC = $(shell command -v gcc 2> /dev/null)
       ifeq ($(GCC),)
@@ -47,11 +47,11 @@ whitespace += $(whitespace)
 comma := ,
 build_tags_comma_sep := $(subst $(whitespace),$(comma),$(build_tags))
 
-ldflags = 	-X github.com/onomyprotocol/cosmos-sdk/version.Name=ochain \
-			-X github.com/onomyprotocol/cosmos-sdk/version.AppName=ochaind \
-			-X github.com/onomyprotocol/cosmos-sdk/version.Version=$(VERSION) \
-			-X github.com/onomyprotocol/cosmos-sdk/version.Commit=$(COMMIT) \
-			-X "github.com/onomyprotocol/cosmos-sdk/version.BuildTags=$(build_tags_comma_sep)" \
+ldflags = 	-X github.com/onomyprotocol/onomy-sdk/version.Name=ochain \
+			-X github.com/onomyprotocol/onomy-sdk/version.AppName=ochaind \
+			-X github.com/onomyprotocol/onomy-sdk/version.Version=$(VERSION) \
+			-X github.com/onomyprotocol/onomy-sdk/version.Commit=$(COMMIT) \
+			-X "github.com/onomyprotocol/onomy-sdk/version.BuildTags=$(build_tags_comma_sep)" \
 			
 
 BUILD_FLAGS := -ldflags '$(ldflags)' -gcflags="all=-N -l"
@@ -91,7 +91,7 @@ proto-check-breaking:
 TM_URL           = https://raw.githubusercontent.com/tendermint/tendermint/v0.34.0-rc3/proto/tendermint
 GOGO_PROTO_URL   = https://raw.githubusercontent.com/regen-network/protobuf/cosmos
 COSMOS_PROTO_URL = https://raw.githubusercontent.com/regen-network/cosmos-proto/master
-COSMOS_SDK_PROTO_URL = https://raw.githubusercontent.com/onomyprotocol/cosmos-sdk/master/proto/cosmos/base
+COSMOS_SDK_PROTO_URL = https://raw.githubusercontent.com/onomyprotocol/onomy-sdk/master/proto/cosmos/base
 
 TM_CRYPTO_TYPES     = third_party/proto/tendermint/crypto
 TM_ABCI_TYPES       = third_party/proto/tendermint/abci

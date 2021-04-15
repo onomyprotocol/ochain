@@ -1,11 +1,11 @@
 package key
 
 import (
-	"github.com/onomyprotocol/cosmos-sdk/crypto/hd"
-	"github.com/onomyprotocol/cosmos-sdk/crypto/keyring"
-	sdk "github.com/onomyprotocol/cosmos-sdk/types"
 	"github.com/cosmos/go-bip39"
 	"github.com/onomyprotocol/ochain/app"
+	"github.com/onomyprotocol/onomy-sdk/crypto/hd"
+	"github.com/onomyprotocol/onomy-sdk/crypto/keyring"
+	sdk "github.com/onomyprotocol/onomy-sdk/types"
 )
 
 var (

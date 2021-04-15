@@ -75,7 +75,7 @@ Verify that ochaind is installed correctly with the following command
 ```bash
 ochaind version --long
 
-➜ cosmos-sdk: 0.34.3
+➜ onomy-sdk: 0.34.3
 git commit: 67ab0b1e1d1e5b898c8cbdede35ad5196dba01b2
 vendor hash: 0341b356ad7168074391ca7507f40b050e667722
 build tags: netgo ledger
@@ -191,7 +191,7 @@ ochaind tx --help
 
 ## The Cosmos Standard Transaction
 
-Transactions in Cosmos embed the [Standard Transaction type](https://godoc.org/github.com/onomyprotocol/cosmos-sdk/x/auth#StdTx) from the Cosmos SDK. The Ledger device displays a serialized JSON representation of this object for you to review before signing the transaction. Here are the fields and what they mean:
+Transactions in Cosmos embed the [Standard Transaction type](https://godoc.org/github.com/onomyprotocol/onomy-sdk/x/auth#StdTx) from the Cosmos SDK. The Ledger device displays a serialized JSON representation of this object for you to review before signing the transaction. Here are the fields and what they mean:
 
 - `chain-id`: The chain to which you are broadcasting the tx, such as the `ochain-13003` testnet or `cosmoshub-2`: mainnet.
 - `account_number`: The global id of the sending account assigned when the account receives funds for the first time.

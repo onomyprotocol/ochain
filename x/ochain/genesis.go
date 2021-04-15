@@ -1,9 +1,9 @@
 package ochain
 
 import (
-	sdk "github.com/onomyprotocol/cosmos-sdk/types"
 	"github.com/onomyprotocol/ochain/x/ochain/keeper"
 	"github.com/onomyprotocol/ochain/x/ochain/types"
+	sdk "github.com/onomyprotocol/onomy-sdk/types"
 )
 
 // InitGenesis initializes the capability module's state from a provided genesis

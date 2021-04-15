@@ -18,7 +18,7 @@ Cosmos SDK 需要安装**Go 1.12+**
 
 ### 安装二进制执行程序
 
-接下来，安装最新版本的 Ochain。需要确认您 `git checkout 了正确的[发布版本](https://github.com/onomyprotocol/cosmos-sdk/releases)。
+接下来，安装最新版本的 Ochain。需要确认您 `git checkout 了正确的[发布版本](https://github.com/onomyprotocol/onomy-sdk/releases)。
 
 ::: warning
 对于主网，请确保你的版本大于或等于`v0.33.0`
@@ -41,7 +41,7 @@ $ ochaind version --long
 `ochaind`的返回应该类似于：
 
 ```
-cosmos-sdk: 0.33.0
+onomy-sdk: 0.33.0
 git commit: 7b4104aced52aa5b59a96c28b5ebeea7877fc4f0
 go.sum hash: d156153bd5e128fec3868eca9a1397a63a864edb5cfa0ac486db1b574b8eecfe
 build tags: netgo ledger

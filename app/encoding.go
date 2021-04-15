@@ -1,8 +1,8 @@
 package app
 
 import (
-	"github.com/onomyprotocol/cosmos-sdk/std"
 	"github.com/onomyprotocol/ochain/app/params"
+	"github.com/onomyprotocol/onomy-sdk/std"
 )
 
 // MakeEncodingConfig creates an EncodingConfig for testing

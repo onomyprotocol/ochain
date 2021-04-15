@@ -3,7 +3,7 @@ package types
 // DONTCOVER
 
 import (
-	sdkerrors "github.com/onomyprotocol/cosmos-sdk/types/errors"
+	sdkerrors "github.com/onomyprotocol/onomy-sdk/types/errors"
 )
 
 // x/ochain module sentinel errors

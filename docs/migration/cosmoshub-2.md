@@ -23,7 +23,7 @@ major upgrade (`cosmoshub-2`). These changes notably consist of many new feature
 protocol changes, and application structural changes that favor developer ergonomics
 and application development.
 
-First and foremost, the [Cosmos SDK](https://github.com/onomyprotocol/cosmos-sdk/) and the
+First and foremost, the [Cosmos SDK](https://github.com/onomyprotocol/onomy-sdk/) and the
 [Ochain](https://github.com/cosmos/ochain) application have been split into separate
 repositories. This allows for both the Cosmos SDK and Ochain to evolve naturally
 and independently. Thus, any future [releases](https://github.com/cosmos/ochain/releases)
@@ -32,7 +32,7 @@ repository not the Cosmos SDK.
 
 Since the Cosmos SDK and Ochain have now been split into separate repositories, their
 versioning will also naturally diverge. In an attempt to decrease community confusion and strive for
-semantic versioning, the [Cosmos SDK](https://github.com/onomyprotocol/cosmos-sdk/) will continue
+semantic versioning, the [Cosmos SDK](https://github.com/onomyprotocol/onomy-sdk/) will continue
 on its current versioning path (i.e. v0.36.x ) and the [Ochain](https://github.com/cosmos/ochain)
 application will become v2.0.x.
 
@@ -51,7 +51,7 @@ Some of the biggest changes to take note on when upgrading as a developer or cli
   robust and flexible system called events. Any client that depended on querying or subscribing to
   tags should take note on the new format as old queries will not work and must be updated. More in
   depth docs on the events system can be found [here](https://github.com/tendermint/tendermint/blob/master/rpc/core/events.go).
-  In addition, each module documents its own events in the specs (e.g. [slashing](https://github.com/onomyprotocol/cosmos-sdk/blob/v0.36.0/docs/spec/slashing/06_events.md)).
+  In addition, each module documents its own events in the specs (e.g. [slashing](https://github.com/onomyprotocol/onomy-sdk/blob/v0.36.0/docs/spec/slashing/06_events.md)).
 - **Height Queries**: Both the CLI and REST clients now (re-)enable height queries via the
   `--height` and `?height` arguments respectively. An important note to keep in mind are that height
   queries against pruning nodes will return errors when a pruned height is queried against. When no
@@ -97,7 +97,7 @@ __Note__: It is assumed you are currently operating a full-node running v0.34.6+
 
    ```bash
    $ ochaind version --long
-   cosmos-sdk: 0.34.6
+   onomy-sdk: 0.34.6
    git commit: 80234baf91a15dd9a7df8dca38677b66b8d148c1
    vendor hash: f60176672270c09455c01e9d880079ba36130df4f5cd89df58b6701f50b13aad
    build tags: netgo ledger
@@ -206,7 +206,7 @@ single parameter, `max_validators`, that we're upgrading based on [proposal 10](
    After this upgrade will maintain the CosmosSDK API stability guarantee to avoid breaking APIs for at
    least 6 months and hopefully long.
 2. Anyone running signing infrastructure(wallets and exchanges) should be conscious that the `type:`
-   field on `StdTx` will have changed from `"type":"auth/StdTx","value":...` to  `"type":"cosmos-sdk/StdTx","value":...`
+   field on `StdTx` will have changed from `"type":"auth/StdTx","value":...` to  `"type":"onomy-sdk/StdTx","value":...`
 3. As mentioned in the notes and SDK CHANGELOG, many queries to cosmos cli are wrapped with `height` fields now.
 4. We highly recommend standing up a [testnet](https://github.com/cosmos/ochain/blob/master/docs/deploy-testnet.md)
    with the `ochain-2.0` release or joining the ochain-13006 testnet. More info for joining the testnet can be

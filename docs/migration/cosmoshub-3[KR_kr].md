@@ -20,9 +20,9 @@
 
 만약 코스모스 허브 또는 코스모스 생태계 블록체인의 블록 익스플로러, 지갑, 거래소, 검증인, 등 서비스 (예, 커스터디 제공자)를 운영하시는 경우, 이번 업그레이드에서 상당한 변경사항이 있음으로 꼭 다음 정보를 참고하십시오.
 
-1. [앱 및 모듈 마이그레이션](https://github.com/onomyprotocol/cosmos-sdk/blob/master/docs/migrations/app_and_modules.md)
-1. [코스모스 v0.40 체인 업그레이드 가이드](https://github.com/onomyprotocol/cosmos-sdk/blob/master/docs/migrations/chain-upgrade-guide-040.md)
-1. [REST 엔드포인트 마이그레이션](https://github.com/onomyprotocol/cosmos-sdk/blob/master/docs/migrations/rest.md)
+1. [앱 및 모듈 마이그레이션](https://github.com/onomyprotocol/onomy-sdk/blob/master/docs/migrations/app_and_modules.md)
+1. [코스모스 v0.40 체인 업그레이드 가이드](https://github.com/onomyprotocol/onomy-sdk/blob/master/docs/migrations/chain-upgrade-guide-040.md)
+1. [REST 엔드포인트 마이그레이션](https://github.com/onomyprotocol/onomy-sdk/blob/master/docs/migrations/rest.md)
 1. [각 버전 체인지로그의 breaking change 모음](breaking_changes.md)
 1. [Inter-Blockchain Communication (IBC)– 체인간 트랜잭션](https://figment.network/resources/cosmos-stargate-upgrade-overview/#ibc)
 1. [Protobuf 마이그레이션 – 블록체인 성능 및 개발 과정 개선](https://figment.network/resources/cosmos-stargate-upgrade-overview/#proto)
@@ -48,7 +48,7 @@ __이번 업그레이드에서 풀 노드 운영자 업그레이드를 진행하
 개발자 또는 클라이언트로서 참고해야할 점은 다음과 같습니다:
 
 - **프로토콜 버퍼(Protocol BufferS)**: 이전 버전의 코스모스 SDK에서는 인코딩 및 디코딩 과정에서 아미노 코덱을 사용했습니다.
-이번 코스모스 SDK 버전에서는 프로토콜 버퍼가 내장되어있습니다. 프로토콜 버퍼를 통해 애플리케이션은 속도, 가독성, 편의성, 프로그래밍 언어 간 상호호환성 등의 부분에서 상당한 개선이 있을 것으로 기대됩니다. [더 읽기](https://github.com/onomyprotocol/cosmos-sdk/blob/master/docs/migrations/app_and_modules.md#protocol-buffers)
+이번 코스모스 SDK 버전에서는 프로토콜 버퍼가 내장되어있습니다. 프로토콜 버퍼를 통해 애플리케이션은 속도, 가독성, 편의성, 프로그래밍 언어 간 상호호환성 등의 부분에서 상당한 개선이 있을 것으로 기대됩니다. [더 읽기](https://github.com/onomyprotocol/onomy-sdk/blob/master/docs/migrations/app_and_modules.md#protocol-buffers)
 - **CLI**: 이전 버전의 코스모스 SDK에서는 블록체인의 CLI와 데몬은 별도의 바이너리로 구성되었으며, 실행하는 블록체인 인터랙션에 따라 `ochaind`와 `gaiacli` 바이너리가 구분되었습니다. 이번 버전의 코스모스 SDK에서는 두 바이너리가 하나의 `ochaind` 바이너리로 통합되었으며 해당 바이너리 내에서 기존에 `gaiacli`에서 사용했던 명령어를 지원합니다.
 - **노드 구성**: 이전 버전의 코스모스 SDK에서는 블록체인 데이터와 노드 설정이 `~/.ochain/`에 저장되었지만, 이번 버전에서는 해당 정보다 `~/.ochain/` 디렉토리에 보관됩니다. 만약 블록체인 데이터 또는 노드 설정을 관리하는 스크립트를 사용하시는 경우 해당 스크립트에서 패스를 변경해야합니다.
 

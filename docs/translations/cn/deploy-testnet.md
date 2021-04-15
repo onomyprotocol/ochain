@@ -6,7 +6,7 @@
 2. 多节点，本地的，自动的测试网
 3. 多节点，远程的，自动的测试网
 
-支持代码可以在[networks 目录](https://github.com/onomyprotocol/cosmos-sdk/tree/develop/networks)中找到，还可以在`local`或`remote`子目录中找到。
+支持代码可以在[networks 目录](https://github.com/onomyprotocol/onomy-sdk/tree/develop/networks)中找到，还可以在`local`或`remote`子目录中找到。
 
 > 注意：`remote`网络引导教程可能与最新版本不同步，不可完全依赖。
 
@@ -61,7 +61,7 @@ ochaind start
 
 ## 多节点，本地的，自动的测试网
 
-在[networks/local 目录](https://github.com/onomyprotocol/cosmos-sdk/tree/develop/networks/local)中运行如下命令:
+在[networks/local 目录](https://github.com/onomyprotocol/onomy-sdk/tree/develop/networks/local)中运行如下命令:
 
 ### 需要
 
@@ -78,7 +78,7 @@ ochaind start
 git clone https://github.com/cosmos/ochain.git
 
 # Work from the SDK repo
-cd cosmos-sdk
+cd onomy-sdk
 
 # Build the linux binary in ./build
 make build-linux
@@ -190,7 +190,7 @@ BINARY=gaiafoo make localnet-start
 
 ## 多节点，远程的，自动的测试网
 
-应该从[networks 目录](https://github.com/onomyprotocol/cosmos-sdk/tree/develop/networks)运行下面的命令。
+应该从[networks 目录](https://github.com/onomyprotocol/onomy-sdk/tree/develop/networks)运行下面的命令。
 
 ### Terraform & Ansible
 

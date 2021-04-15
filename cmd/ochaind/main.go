@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	svrcmd "github.com/onomyprotocol/cosmos-sdk/server/cmd"
 	"github.com/onomyprotocol/ochain/app"
 	"github.com/onomyprotocol/ochain/cmd/ochaind/cmd"
+	svrcmd "github.com/onomyprotocol/onomy-sdk/server/cmd"
 )
 
 func main() {
