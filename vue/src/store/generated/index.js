@@ -1,18 +1,18 @@
 // THIS FILE IS GENERATED AUTOMATICALLY. DO NOT MODIFY.
-import CosmosCosmosSdkCosmosBaseV1Beta1 from './cosmos/onomy-sdk/cosmos.base.v1beta1';
-import CosmosCosmosSdkIbcCoreConnectionV1 from './cosmos/onomy-sdk/ibc.core.connection.v1';
-import CosmosCosmosSdkIbcApplicationsTransferV1 from './cosmos/onomy-sdk/ibc.applications.transfer.v1';
-import CosmosCosmosSdkCosmosSlashingV1Beta1 from './cosmos/onomy-sdk/cosmos.slashing.v1beta1';
-import CosmosCosmosSdkCosmosEvidenceV1Beta1 from './cosmos/onomy-sdk/cosmos.evidence.v1beta1';
-import CosmosCosmosSdkCosmosStakingV1Beta1 from './cosmos/onomy-sdk/cosmos.staking.v1beta1';
-import CosmosCosmosSdkCosmosBaseAbciV1Beta1 from './cosmos/onomy-sdk/cosmos.base.abci.v1beta1';
-import CosmosCosmosSdkCosmosVestingV1Beta1 from './cosmos/onomy-sdk/cosmos.vesting.v1beta1';
-import CosmosCosmosSdkCosmosBankV1Beta1 from './cosmos/onomy-sdk/cosmos.bank.v1beta1';
-import CosmosCosmosSdkCosmosGovV1Beta1 from './cosmos/onomy-sdk/cosmos.gov.v1beta1';
-import CosmosCosmosSdkIbcCoreClientV1 from './cosmos/onomy-sdk/ibc.core.client.v1';
-import CosmosCosmosSdkCosmosDistributionV1Beta1 from './cosmos/onomy-sdk/cosmos.distribution.v1beta1';
-import CosmosCosmosSdkIbcCoreChannelV1 from './cosmos/onomy-sdk/ibc.core.channel.v1';
-import CosmosCosmosSdkCosmosCrisisV1Beta1 from './cosmos/onomy-sdk/cosmos.crisis.v1beta1';
+import CosmosCosmosSdkCosmosBaseV1Beta1 from './onomyprotocol/onomy-sdk/cosmos.base.v1beta1';
+import CosmosCosmosSdkIbcCoreConnectionV1 from './onomyprotocol/onomy-sdk/ibc.core.connection.v1';
+import CosmosCosmosSdkIbcApplicationsTransferV1 from './onomyprotocol/onomy-sdk/ibc.applications.transfer.v1';
+import CosmosCosmosSdkCosmosSlashingV1Beta1 from './onomyprotocol/onomy-sdk/cosmos.slashing.v1beta1';
+import CosmosCosmosSdkCosmosEvidenceV1Beta1 from './onomyprotocol/onomy-sdk/cosmos.evidence.v1beta1';
+import CosmosCosmosSdkCosmosStakingV1Beta1 from './onomyprotocol/onomy-sdk/cosmos.staking.v1beta1';
+import CosmosCosmosSdkCosmosBaseAbciV1Beta1 from './onomyprotocol/onomy-sdk/cosmos.base.abci.v1beta1';
+import CosmosCosmosSdkCosmosVestingV1Beta1 from './onomyprotocol/onomy-sdk/cosmos.vesting.v1beta1';
+import CosmosCosmosSdkCosmosBankV1Beta1 from './onomyprotocol/onomy-sdk/cosmos.bank.v1beta1';
+import CosmosCosmosSdkCosmosGovV1Beta1 from './onomyprotocol/onomy-sdk/cosmos.gov.v1beta1';
+import CosmosCosmosSdkIbcCoreClientV1 from './onomyprotocol/onomy-sdk/ibc.core.client.v1';
+import CosmosCosmosSdkCosmosDistributionV1Beta1 from './onomyprotocol/onomy-sdk/cosmos.distribution.v1beta1';
+import CosmosCosmosSdkIbcCoreChannelV1 from './onomyprotocol/onomy-sdk/ibc.core.channel.v1';
+import CosmosCosmosSdkCosmosCrisisV1Beta1 from './onomyprotocol/onomy-sdk/cosmos.crisis.v1beta1';
 export default {
     CosmosCosmosSdkCosmosBaseV1Beta1: load(CosmosCosmosSdkCosmosBaseV1Beta1, 'cosmos.base.v1beta1'),
     CosmosCosmosSdkIbcCoreConnectionV1: load(CosmosCosmosSdkIbcCoreConnectionV1, 'ibc.core.connection.v1'),
